@@ -9,9 +9,10 @@
 
     <body>
         
-        <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine')">Docking</button>
-        <button class="tablink" onclick="changeTab('AYAYA', this, 'pink')">AYAYA</button>
-        <button class="tablink" onclick="changeTab('Saltmine', this, 'white')">Saltmine</button>
+        <audio id="spacecoast" src="spacecoast.mp3"></audio>
+        <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine');document.getElementById('spacecoast').pause();">Docking</button>
+        <button class="tablink" onclick="changeTab('AYAYA', this, 'pink');document.getElementById('spacecoast').pause();">AYAYA</button>
+        <button class="tablink" onclick="changeTab('Saltmine', this, 'white');document.getElementById('spacecoast').play();">Saltmine</button>
 
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
@@ -28,7 +29,7 @@
         <div id="AYAYA" class="tabcontent">
             <h2>AYAYA</h2>
             <a href ="https://www.youtube.com/watch?v=D0q0QeQbw9U" target ="_blank"><img src ="https://thumbs.gfycat.com/DeepRemarkableAnkole-size_restricted.gif" alt = "A bunch of weebs calling out a name" width="455" height="262"> </a>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/D0q0QeQbw9UI?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/D0q0QeQbw9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div id="Saltmine" class="tabcontent">

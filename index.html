@@ -8,10 +8,11 @@
     </head>
     <body>
         <audio id="spacecoast" src="spacecoast.mp3"></audio>
-        <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine');document.getElementById('spacecoast').pause();">Docking</button>
-        <button class="tablink" onclick="changeTab('AYAYA', this, 'pink');document.getElementById('spacecoast').pause();">AYAYA</button>
-        <button class="tablink" onclick="changeTab('Saltmine', this, 'white');document.getElementById('spacecoast').play();">Saltmine</button>
-
+		<audio id="kiraqueen" src="kiraqueen.mp3"></audio>
+        <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();">Docking</button>
+        <button class="tablink" onclick="changeTab('AYAYA', this, 'pink');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();">AYAYA</button>
+        <button class="tablink" onclick="changeTab('Saltmine', this, 'white');document.getElementById('spacecoast').play();document.getElementById('kiraqueen').pause();">Saltmine</button>
+		<button class="tablink" onclick="changeTab('JoJo', this, 'purple');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();">'ジョジョ'</button>
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
             <li>funk_your_bricks</li>
@@ -34,5 +35,9 @@
             <h2>Saltmine</h2>
         </div>
 
+		<div id="JoJo" class ="tabcontent">
+			<img src ="menace.gif" width="300" height="300">
+			<img src ="menace.gif" width="300" height="300">
+			<img src ="menace.gif" width="300" height="300">
     </body>
 </html>

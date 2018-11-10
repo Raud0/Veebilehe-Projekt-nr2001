@@ -16,4 +16,4 @@ function changeTab(pagename, element, colour){
     element.style.backgroundColor = colour;
 }
 
-document.getElementById("defaultOpen").click();
+document.getElementById("defaulttab").click()

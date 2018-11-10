@@ -12,7 +12,7 @@
         <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();" id = "defaulttab">Docking</button>
         <button class="tablink" onclick="changeTab('AYAYA', this, 'pink');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();">AYAYA</button>
         <button class="tablink" onclick="changeTab('Saltmine', this, 'white');document.getElementById('spacecoast').play();document.getElementById('kiraqueen').pause();">Saltmine</button>
-		<button class="tablink" onclick="changeTab('JoJo', this, 'purple');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();">'ジョジョ'</button>
+		<button class="tablink" onclick="aktiveeri_giffid();setTimeout(shitstorm,132000);video_eemaldaja();changeTab('JoJo', this, 'purple');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();">'ジョジョ'</button>
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
             <li>funk_your_bricks</li>
@@ -37,9 +37,19 @@
         </div>
 
 		<div id="JoJo" class ="tabcontent">
-			<img src ="menace.gif" width="300" height="300">
-			<img src ="menace.gif" width="300" height="300">
-			<img src ="menace.gif" width="300" height="300">
+			<div id="giffid">
+				<img src ="menace.gif" width="300" height="300">
+				<img src ="menace.gif" width="300" height="300">
+				<img src ="menace.gif" width="300" height="300">
+			</div>
+			<div id ="big_video">
+				<video width="1900" height="1000" controls id = "Peepee">
+				<source src="bite_the_dick.mp4">
+				</video>
+			</div>
+			
+			
         <script>document.getElementById("defaulttab").click()</script>
+		</div>
     </body>
 </html>

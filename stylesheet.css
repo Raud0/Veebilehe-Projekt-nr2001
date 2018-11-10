@@ -3,6 +3,12 @@ body, html {
   margin: 0;
   font-family: "Comic Sans MS", cursive
 }
+#big_video{
+	width: 1900px;
+	height:1000px;
+}
+#giffid{
+}
 .tablink {
   background-color: magenta;
   color: cyan;

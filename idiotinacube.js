@@ -14,6 +14,13 @@ function changeTab(pagename, element, colour){
     document.getElementById(pagename).style.display = "block";
     
     element.style.backgroundColor = colour;
-}
+};
 
-document.getElementById("defaulttab").click()
+/*increment game code*/
+
+var steps = 0
+
+function takeStep(number){
+    steps = steps + number;
+    document.getElementById("c_steps").innerHTML = steps;
+};

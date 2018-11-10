@@ -4,13 +4,14 @@ body, html {
   font-family: "Comic Sans MS", cursive
 }
 .tablink {
-  background-color: #555;
-  color: #FF00FF;
+  background-color: magenta;
+  color: cyan;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
+  font-family: "Comic Sans MS", cursive;
   font-size: 17px;
   width: 25%;
 }
@@ -27,3 +28,4 @@ body, html {
 
 #Docking {background-color: #6600ff;}
 #AYAYA {background-color: DeepPink;}
+#Saltmine {background-color: white;}

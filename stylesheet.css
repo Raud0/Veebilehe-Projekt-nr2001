@@ -18,7 +18,13 @@ body, html {
 .tablink:hover {
   background-color: #777;
 }
-
+.saltmine{
+	color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  cursor:url(Kripp.png), pointer;
+}
 .tabcontent {
   color: white;
   display: none;
@@ -28,4 +34,5 @@ body, html {
 
 #Docking {background-color: #6600ff;}
 #AYAYA {background-color: DeepPink;}
-#Saltmine {background-color: white;}
+#Saltmine {background-color: white;
+		cursor:url(Kripp.png), pointer;}

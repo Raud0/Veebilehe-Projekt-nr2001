@@ -7,7 +7,7 @@ function changepage(pagename, element, colour){
     }
 
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.display = "";
+        tablinks[i].style.backgroundColor = "";
     }
 
     document.getElementById(pagename).style.display = "block";

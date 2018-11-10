@@ -1,4 +1,4 @@
-function changepage(pagename, element, colour){
+function changeTab(pagename, element, colour){
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     

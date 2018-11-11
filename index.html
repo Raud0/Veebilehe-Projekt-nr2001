@@ -11,13 +11,13 @@
         <audio id="spacecoast" src="audiofiles/spacecoast.mp3"></audio>
         <audio id="kiraqueen" src="audiofiles/kiraqueen.mp3"></audio>
         <audio id="hog" src="audiofiles/hog.mp3"></audio>
-        
-        <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine', );document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();" id = "defaulttab">Docking</button>
-        <button class="tablink" onclick="changeTab('AYAYA', this, 'pink');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();">AYAYA</button>
-        <button class="tablink" onclick="changeTab('Saltmine', this, 'white');document.getElementById('spacecoast').play();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();">Saltmine</button>
-        <button class="tablink" onclick="changeTab('JoJo', this, 'purple');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();document.getElementById('hog').pause();">'ジョジョ'</button>
-        <button class="tablink" onclick="changeTab('Escalation', this, 'mediumaquamarine');document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').play();">Escalation</button>
-        
+
+        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('Docking', this, 'aquamarine');" id = "defaulttab">Docking</button>
+        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('AYAYA', this, 'pink');">AYAYA</button>
+        <button class="tablink" onclick="document.getElementById('spacecoast').play();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('Saltmine', this, 'white');">Saltmine</button>
+		<button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();document.getElementById('hog').pause();changeTab('JoJo', this, 'purple');aktiveeri_giffid();Tolm = setTimeout(shitstorm,132000);video_eemaldaja();">'ジョジョ'</button>
+		<button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').play();changeTab('Escalation', this, 'mediumaquamarine');">Escalation</button>
+
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
             <li>funk_your_bricks</li>
@@ -33,8 +33,8 @@
         
         <div id="AYAYA" class="tabcontent">
             <h2>AYAYA</h2>
-            <a href ="https://www.youtube.com/watch?v=D0q0QeQbw9U" target ="_blank"><img src ="https://thumbs.gfycat.com/DeepRemarkableAnkole-size_restricted.gif" alt = "A bunch of weebs calling out a name" width="455" height="262"> </a>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/D0q0QeQbw9U?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href ="https://www.youtube.com/watch?v=D0q0QeQbw9U" target ="_blank"><img src ="imagefiles/ayaya.gif" alt = "A bunch of weebs calling out a name" width="455" height="262"> </a>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/D0q0QeQbw9U?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
 
         <div id="Saltmine" class="tabcontent Saltycorn">
@@ -42,16 +42,24 @@
         </div>
 
 		<div id="JoJo" class ="tabcontent">
-			<img src ="imagefiles/menace.gif" width="300" height="300">
-			<img src ="imagefiles/menace.gif" width="300" height="300">
-			<img src ="imagefiles/menace.gif" width="300" height="300">
-        <script>document.getElementById("defaulttab").click()</script>
-        </div>
+			<div id="giffid">
+				<img src ="imagefiles/menace.gif" width="300" height="300">
+			    <img src ="imagefiles/menace.gif" width="300" height="300">
+			    <img src ="imagefiles/menace.gif" width="300" height="300">
+			</div>
+			<div id ="big_video">
+				<video width="1900" height="1000" controls id = "Peepee">
+				<source src="imagefiles/bite_the_dick.mp4">
+				</video>
+			</div>
+		</div>
 
         <div id="Escalation" class ="tabcontent">
-            <button onclick="takeStep(1)"></button>
+            <button onclick="takeStep(1)">Take a step.</button>
             <p>You have taken <span id="c_steps">0</span> steps.</p>
         </div>
-        
+
+
+        <script>document.getElementById("defaulttab").click()</script>
     </body>
 </html>

@@ -1,3 +1,4 @@
+/*tab-change functionality*/
 function changeTab(pagename, element, colour){
     var i, tabcontent, tablinks;
     
@@ -13,11 +14,38 @@ function changeTab(pagename, element, colour){
 
     document.getElementById(pagename).style.display = "block";
     
-    element.style.backgroundColor = colour;
+	element.style.backgroundColor = colour;
+	clearTimeout(Tolm);
+};
+
+/*a fucking mess*/
+function shitstorm() {
+	var giffid = document.getElementById("giffid");
+	var video = document.getElementById("big_video");
+	var paris_video = document.getElementById("Peepee");
+	giffid.style.display = "none";
+	video.style.display = "block";
+	staller();
+	setTimeout(function(){changeTab('Docking', this, 'aquamarine')},14000);
+	setTimeout(function(){document.getElementById('kiraqueen').pause()},14000);
+};
+
+function aktiveeri_giffid() {
+	var giffid = document.getElementById("giffid");
+	giffid.style.display = "block";
+};
+
+function staller(){
+	document.getElementById("Peepee").play();
+};
+
+function video_eemaldaja() {
+	var video = document.getElementById("big_video");
+	document.getElementById("Peepee").pause();
+	video.style.display = "none";
 };
 
 /*increment game code*/
-
 var steps = 0
 
 function takeStep(number){

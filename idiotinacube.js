@@ -15,10 +15,11 @@ function changeTab(pagename, element, colour){
     document.getElementById(pagename).style.display = "block";
     
 	element.style.backgroundColor = colour;
+	if (pagename != "JoJo"){
 	clearTimeout(Tolm);
+	}
 };
 
-/*a fucking mess*/
 function shitstorm() {
 	var giffid = document.getElementById("giffid");
 	var video = document.getElementById("big_video");

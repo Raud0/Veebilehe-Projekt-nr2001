@@ -35,8 +35,8 @@ body, html {
 #Docking {background-color: #6600ff;}
 #AYAYA {background-color: DeepPink;}
 #Saltmine {background-color: white;
-		background-image: url("salt.jpg");
-		cursor:url(Kripp.png), pointer;}
+		background-image: url("imagefiles/salt.jpg");
+		cursor:url("imagefiles/Kripp.png"), pointer;}
 #JoJo {background-color: yellow;
-        background-image: url("OMG MY WIFE JUST DIVORCED ME.jpg")	}
+        background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg")	}
 #Escalation {background-color: mediumaquamarine;}

@@ -23,6 +23,7 @@ body, html {
 }
 #Escalationbutton:hover{
   background-image: url("imagefiles/escalator.gif");
+  background-size: 100%
 }
 .tabcontent {
   color: white;
@@ -51,4 +52,40 @@ body, html {
   height: 100%;
 }
 #giffid{
+}
+/*increment game*/
+.incrementbutton{
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: normal;
+}
+.incrementbutton:hover{
+  background-color: white;
+}
+.incrementbutton:active{
+  background-color: white;
+  font-weight: bolder;
+}
+.scrollmenu{
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height:5em;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.scrollmenu li{
+  color: white;
+  list-style-type: none;
+}
+.scrollmenu li:hover{
+  color: black;
+  background-color: white;
+  font-weight: normal;
 }

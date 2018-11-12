@@ -36,9 +36,11 @@ function shitstorm() {
 	document.getElementById("big_video").style.display = "none";
 	Tolm = setTimeout(function(){
 		document.getElementById("giffid").style.display = "none";
+		document.getElementById("tablist").style.display = "none"
 		document.getElementById("big_video").style.display = "block";
 		document.getElementById("Peepee").play();
 			setTimeout(function(){
+				document.getElementById("tablist").style.display = "block"
 				document.getElementById("Peepee").pause();
 				document.getElementById("big_video").style.display = "none";
 				takebStep(1);

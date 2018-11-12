@@ -33,11 +33,13 @@ function changeTab(pagename, element, colour,song){
 };
 
 function shitstorm() {
+	document.getElementById("kiraqueen").currentTime = 0;
 	document.getElementById("big_video").style.display = "none";
 	Tolm = setTimeout(function(){
 		document.getElementById("giffid").style.display = "none";
 		document.getElementById("tablist").style.display = "none"
 		document.getElementById("big_video").style.display = "block";
+		document.getElementById("Peepee").currentTime = 0;
 		document.getElementById("Peepee").play();
 			setTimeout(function(){
 				document.getElementById("tablist").style.display = "block"

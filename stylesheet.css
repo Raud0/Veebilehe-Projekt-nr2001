@@ -21,6 +21,9 @@ body, html {
 .tablink:hover {
   background-color: transparent;
 }
+#Escalationbutton:hover{
+  background-image: url("imagefiles/escalator.gif");
+}
 .tabcontent {
   color: white;
   display: none;

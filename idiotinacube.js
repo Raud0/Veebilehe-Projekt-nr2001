@@ -49,16 +49,16 @@ function shitstorm() {
 };
 
 /*increment game code*/
-var steps = 0;
-var isteps = 0;
+var asteps = 0;
+var bsteps = 0;
 
 function takeaStep(number){
-    steps = steps + number;
-    document.getElementById("a_steps").innerHTML = steps;
+    asteps = asteps + number;
+    document.getElementById("a_steps").innerHTML = asteps;
 };
 function takebStep(number){
-    isteps = isteps + number;
-    document.getElementById("b_steps").innerHTML = isteps;
+    bsteps = bsteps + number;
+    document.getElementById("b_steps").innerHTML = bsteps;
 };
 function makecomplex(){
 	document.getElementById("b_steps_i").textContent="i";

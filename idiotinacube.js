@@ -16,13 +16,15 @@ function changeTab(pagename, element, colour,song){
 	
 	var songs = ["spacecoast","kiraqueen","hog"];
 
-	for (i = 0; i < tablinks.length; i++) {
+	for (i = 0; i < songs.length; i++) {
 		if (songs[i] == song){
 			document.getElementById(song).play();
 		} else {
 		document.getElementById(songs[i]).pause();
 		}
 	}
+
+	takeaStep(0.5)
 
 	element.style.backgroundColor = colour;
 	if (pagename != "JoJo"){
@@ -37,17 +39,28 @@ function shitstorm() {
 		document.getElementById("big_video").style.display = "block";
 		document.getElementById("Peepee").play();
 			setTimeout(function(){
-				changeTab('Docking', this, 'aquamarine','');
-				document.getElementById("big_video").style.display = "none";
 				document.getElementById("Peepee").pause();
-			},14000);
-	},132250);
+				document.getElementById("big_video").style.display = "none";
+				takebStep(1);
+				makecomplex();
+				changeTab('Docking', this, 'aquamarine','');
+			},500);
+	},132500);
 };
 
 /*increment game code*/
-var steps = 0
+var steps = 0;
+var isteps = 0;
 
-function takeStep(number){
+function takeaStep(number){
     steps = steps + number;
-    document.getElementById("c_steps").innerHTML = steps;
+    document.getElementById("a_steps").innerHTML = steps;
+};
+function takebStep(number){
+    isteps = isteps + number;
+    document.getElementById("b_steps").innerHTML = isteps;
+};
+function makecomplex(){
+	document.getElementById("b_steps_i").textContent="i";
+	document.getElementById("ab_sign").textContent=" + ";
 };

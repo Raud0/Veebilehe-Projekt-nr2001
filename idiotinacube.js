@@ -55,13 +55,15 @@ function shitstorm() {
 };
 
 /*increment game code*/
+var rate = 16;
+
 var asteps = 0;
 var bsteps = 0;
 var complex = false
 
 var astephighest = 0;
-var astepachievement = [5,10]
-var astepsachieved = [false,false]
+var astepachievement = [5,10,50,100]
+var astepsachieved = [false,false,false,false]
 
 var astepspeed = 0.00;
 var bstepspeed = 0;
@@ -95,24 +97,39 @@ function addlogmessage(logmessage){
 };
 
 function astepchecker(){
-	if (asteps > astephighest){
+	if (asteps >= astephighest){
 		astephighest = asteps;
-		if (astephighest == astepachievement[0] && astepsachieved[0] == false){
+		if (astephighest >= astepachievement[0] && astepsachieved[0] == false){
 			addlogmessage("You feel the ground shift beneath your feet.");
 			astepsachieved[0] = true;
-			astepspeed = -0.01;
+			astepspeed = astepspeed -0.01;
+		}
+		if (astephighest >= astepachievement[1] && astepsachieved[1] == false){
+			addlogmessage("Sand is cascading down the incline.");
+			astepsachieved[1] = true;
+			astepspeed = astepspeed -0.05;
+		}
+		if (astephighest >= astepachievement[2] && astepsachieved[2] == false){
+			addlogmessage("The top of the incline has started to rise away from you.");
+			astepsachieved[2] = true;
+			astepspeed = astepspeed -0.5;
+		}
+		if (astephighest >= astepachievement[3] && astepsachieved[3] == false){
+			addlogmessage("The ground disappears!");
+			astepsachieved[3] = true;
+			astepspeed = astepspeed -24;
 		}
 	};	
 };
 
 window.setInterval(function(){
-	takeaStep(astepspeed);
-	takebStep(bstepspeed);
-},timespeed);
+	takeaStep(astepspeed/rate);
+	takebStep(bstepspeed/rate);
+},timespeed/rate);
 
 window.setInterval(function(){
 	document.getElementById("a_steps").innerHTML = Math.round(asteps*1000)/1000;
 	if (complex){
 		document.getElementById("b_steps").innerHTML = Math.round(bsteps*1000)/1000;
 	};
-},16);
+},rate);

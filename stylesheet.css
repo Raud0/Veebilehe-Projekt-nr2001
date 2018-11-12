@@ -24,13 +24,6 @@ body, html {
 .tablink:hover {
   background-color: #777;
 }
-.saltmine{
-	color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-  cursor:url(Kripp.png), pointer;
-}
 .tabcontent {
   color: white;
   display: none;
@@ -42,7 +35,10 @@ body, html {
 #AYAYA {background-color: DeepPink;}
 #Saltmine {background-color: white;
 		background-image: url("imagefiles/salt.jpg");
-		cursor:url("imagefiles/Kripp.png"), pointer;}
+		cursor: url("imagefiles/Kripp.png"), pointer;}
 #JoJo {background-color: yellow;
-        background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg")	}
+        background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg");}
 #Escalation {background-color: mediumaquamarine;}
+#Ronald {background-color: red;}
+#harambe {background-color: yellow;
+        background-image: url("imagefiles/NotKripp.png");}

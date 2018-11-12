@@ -1,5 +1,5 @@
 /*tab-change functionality*/
-function changeTab(pagename, element, colour){
+function changeTab(pagename, element, colour,song){
     var i, tabcontent, tablinks;
     
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -13,7 +13,17 @@ function changeTab(pagename, element, colour){
     }
 
     document.getElementById(pagename).style.display = "block";
-    
+	
+	var songs = ["spacecoast","kiraqueen","hog"];
+
+	for (i = 0; i < tablinks.length; i++) {
+		if (songs[i] == song){
+			document.getElementById(song).play();
+		} else {
+		document.getElementById(songs[i]).pause();
+		}
+	}
+
 	element.style.backgroundColor = colour;
 	if (pagename != "JoJo"){
 		clearTimeout(Tolm);
@@ -21,28 +31,17 @@ function changeTab(pagename, element, colour){
 };
 
 function shitstorm() {
-	var giffid = document.getElementById("giffid");
-	var video = document.getElementById("big_video");
-	giffid.style.display = "none";
-	video.style.display = "block";
-	staller();
-	setTimeout(function(){changeTab('Docking', this, 'aquamarine')},14000);
-	setTimeout(function(){document.getElementById('kiraqueen').pause()},14000);
-};
-
-function aktiveeri_giffid() {
-	var giffid = document.getElementById("giffid");
-	giffid.style.display = "block";
-};
-
-function staller(){
-	document.getElementById("Peepee").play();
-};
-
-function video_eemaldaja() {
-	var video = document.getElementById("big_video");
-	document.getElementById("Peepee").pause();
-	video.style.display = "none";
+	document.getElementById("big_video").style.display = "none";
+	Tolm = setTimeout(function(){
+		document.getElementById("giffid").style.display = "none";
+		document.getElementById("big_video").style.display = "block";
+		document.getElementById("Peepee").play();
+			setTimeout(function(){
+				changeTab('Docking', this, 'aquamarine','');
+				document.getElementById("big_video").style.display = "none";
+				document.getElementById("Peepee").pause();
+			},14000);
+	},132250);
 };
 
 /*increment game code*/

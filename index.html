@@ -12,14 +12,16 @@
         <audio id="kiraqueen" src="audiofiles/kiraqueen.mp3"></audio>
         <audio loop id="hog" src="audiofiles/hog.mp3"></audio>
 
-        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('Docking', this, 'aquamarine');" id = "defaulttab">Docking</button>
-        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('AYAYA', this, 'pink');">AYAYA</button>
-        <button class="tablink" onclick="document.getElementById('spacecoast').play();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('Saltmine', this, 'white');">Saltmine</button>
-		<button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').play();document.getElementById('hog').pause();video_eemaldaja();changeTab('JoJo', this, 'purple');aktiveeri_giffid();Tolm = setTimeout(shitstorm,132000)">'ジョジョ'</button>
-		<button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').play();changeTab('Escalation', this, 'mediumaquamarine');">Escalation</button>
-        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('Ronald', this, 'red');">Ronald</button>
-        <button class="tablink" onclick="document.getElementById('spacecoast').pause();document.getElementById('kiraqueen').pause();document.getElementById('hog').pause();changeTab('harambe', this, 'yellow');">harambe</button>
-		
+        <div id="tablist">
+            <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine','');" id = "defaulttab">Docking</button>
+            <button class="tablink" onclick="changeTab('AYAYA', this, 'pink','');">AYAYA</button>
+            <button class="tablink" onclick="changeTab('Saltmine', this, 'white','spacecoast');">Saltmine</button>
+            <button class="tablink" onclick="shitstorm();changeTab('JoJo', this, 'purple','kiraqueen');">'ジョジョ'</button>
+            <button class="tablink" onclick="changeTab('Escalation', this, 'mediumaquamarine','hog');">Escalation</button>
+            <button class="tablink" onclick="changeTab('Ronald', this, 'red','');">Ronald</button>
+            <button class="tablink" onclick="changeTab('harambe', this, 'yellow','');">harambe</button>
+        </div>
+            
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
             <li>funk_your_bricks</li>
@@ -50,8 +52,8 @@
 			    <img src ="imagefiles/menace.gif" width="300" height="300">
 			</div>
 			<div id ="big_video">
-				<video width="1900" height="1000" controls id = "Peepee">
-				<source src="imagefiles/bite_the_dick.mp4">
+				<video width=100% height=100% controls id = "Peepee">
+				    <source src="imagefiles/bite_the_dick.mp4">
 				</video>
 			</div>
 		</div>

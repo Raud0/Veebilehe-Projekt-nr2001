@@ -3,13 +3,8 @@ body, html {
   margin: 0;
   font-family: "Comic Sans MS", cursive
 }
-#big_video{
-	width: 100%;
-	height: 100%;
-}
-#giffid{
-}
 
+/*tabs*/
 .tablink {
   background-color: magenta;
   color: cyan;
@@ -32,15 +27,25 @@ body, html {
   padding: 100px 20px;
   height: 100%;
 }
-
 #Docking {background-color: #6600ff;}
 #AYAYA {background-color: DeepPink;}
-#Saltmine {background-color: white;
-		background-image: url("imagefiles/salt.jpg");
-		cursor: url("imagefiles/Kripp.png"), pointer;}
-#JoJo {background-color: yellow;
-        background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg");}
+#Saltmine {
+  background-color: white;
+	background-image: url("imagefiles/salt.jpg");
+	cursor: url("imagefiles/Kripp.png"), pointer;}
+#JoJo {
+  background-color: yellow;
+  background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg");}
 #Escalation {background-color: mediumaquamarine;}
 #Ronald {background-color: red;}
-#harambe {background-color: yellow;
-        background-image: url("imagefiles/NotKripp.png");}
+#harambe {
+  background-color: yellow;
+  background-image: url("imagefiles/NotKripp.png");}
+
+/*special case a_la andreas*/
+#big_video{
+  width: 100%;
+  height: 100%;
+}
+#giffid{
+}

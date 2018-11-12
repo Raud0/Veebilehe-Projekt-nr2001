@@ -32,6 +32,7 @@ function changeTab(pagename, element, colour,song){
 	}
 };
 
+/*big brain code*/
 function shitstorm() {
 	document.getElementById("big_video").style.display = "none";
 	Tolm = setTimeout(function(){

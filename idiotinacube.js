@@ -16,14 +16,13 @@ function changeTab(pagename, element, colour){
     
 	element.style.backgroundColor = colour;
 	if (pagename != "JoJo"){
-	clearTimeout(Tolm);
+		clearTimeout(Tolm);
 	}
 };
 
 function shitstorm() {
 	var giffid = document.getElementById("giffid");
 	var video = document.getElementById("big_video");
-	var paris_video = document.getElementById("Peepee");
 	giffid.style.display = "none";
 	video.style.display = "block";
 	staller();

@@ -44,7 +44,7 @@ function shitstorm() {
 				takebStep(1);
 				makecomplex();
 				changeTab('Docking', this, 'aquamarine','');
-			},500);
+			},14000);
 	},132500);
 };
 

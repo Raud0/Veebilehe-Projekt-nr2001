@@ -36,14 +36,41 @@ function changeTab(pagename, element, colour,song){
 		if (pagename == "JoJo" && document.getElementById("kiraupgrade")){
 			shitstorm();
 			countdown();
-		};
+			liigutaja();
+		}
 		};
 		
 	};
 
 /*big brain code*/
+
+function liigutaja() {
+	pilt = document.getElementById("SecretQueen");
+	pilt.style.display = "none";
+	var posx = 1860;
+	var posy = 600;
+	var liikumisintervall = setInterval(millisekund,200);
+	function millisekund(){
+		pilt.style.display = "block";
+		if(document.getElementById("JoJo").style.display === "none"){
+			clearInterval(liikumisintervall);
+		}
+		else{
+			if (posx == 1199){
+				clearInterval(liikumisintervall);
+				pilt.style.display = "none";
+			}
+			else{
+				posx = posx - 1;
+				pilt.style.top = posy + "px";
+				pilt.style.left = posx + "px";
+			}
+		}
+	}
+}
+
 function countdown() {
-	var Taimer = 5000;
+	var Taimer = 132500;
 	document.getElementById("timeridiv").style.display = "block";
 	var Intervall = setInterval(function(){
 		if(document.getElementById("JoJo").style.display === "none"){
@@ -93,7 +120,7 @@ function shitstorm() {
 				addlogmessage("You bite on some dust.");
 				changeTab('Docking', this, 'aquamarine','');
 				},14000);
-	},5000);
+	},132500);
 		var Tolmukontroll = setInterval(function(){
 			if(document.getElementById("JoJo").style.display === "none"){
 			clearTimeout(Tolm);

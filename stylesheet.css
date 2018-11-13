@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: "Comic Sans MS", cursive
+  font-family: "Comic Sans MS", cursive;
 }
 
 /*tabs*/
@@ -49,11 +49,13 @@ body, html {
 /*special case a_la andreas*/
 #big_video{
   width: 115%;
-  height: 115%;
+  height: 110%;
 }
 #giffid{
 }
-
+#SecretQueen{
+	position: absolute;
+}
 #timeridiv{
 	margin: auto;
 	width:40%;

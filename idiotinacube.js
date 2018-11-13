@@ -1,8 +1,10 @@
 /*tab-change functionality*/
 var currentpage = "";
+var Tolm;
 function changeTab(pagename, element, colour,song){
 	if (currentpage != pagename){
 		currentpage = pagename;
+		
 		var i, tabcontent, tablinks;
 		
 		tabcontent = document.getElementsByClassName("tabcontent");
@@ -30,19 +32,18 @@ function changeTab(pagename, element, colour,song){
 		
 		element.style.backgroundColor = colour;
 		
-		if (pagename != "JoJo"){
-			clearTimeout(Tolm);
-		};
+		
 		if (pagename == "JoJo" && document.getElementById("kiraupgrade")){
+			shitstorm();
 			countdown();
 		};
-	};
+		};
 		
-};
+	};
 
 /*big brain code*/
 function countdown() {
-	var Taimer = 132500;
+	var Taimer = 5000;
 	document.getElementById("timeridiv").style.display = "block";
 	var Intervall = setInterval(function(){
 		if(document.getElementById("JoJo").style.display === "none"){
@@ -70,12 +71,15 @@ function shitstorm() {
 	document.getElementById("big_video").style.display = "none";
 	if(document.getElementById("replace")){}
 	else{
-		Tolm = setTimeout(function(){
+		var Tolm = setTimeout(function(){
 		document.getElementById("giffid").style.display = "none";
 		document.getElementById("tablist").style.display = "none"
 		document.getElementById("big_video").style.display = "block";
 		document.getElementById("Peepee").currentTime = 0;
 		document.getElementById("Peepee").play();
+		document.getElementById("Peepee").removeAttribute("controls");
+		window.scrollTo(150,300);
+		window.onscroll = function () { window.scrollTo(150, 300); };
 			setTimeout(function(){
 				document.getElementById("tablist").style.display = "block"
 				document.getElementById("Peepee").pause();
@@ -85,10 +89,18 @@ function shitstorm() {
 				document.getElementById("kiraqueen").pause();
 				document.getElementById("kiraqueen").id = "replace";
 				document.getElementById("kiraupgrade").id = "kiraqueen";
+				window.onscroll=function(){};
 				addlogmessage("You bite on some dust.");
 				changeTab('Docking', this, 'aquamarine','');
 				},14000);
-	},132500);}
+	},5000);
+		var Tolmukontroll = setInterval(function(){
+			if(document.getElementById("JoJo").style.display === "none"){
+			clearTimeout(Tolm);
+			clearInterval(Intervall);
+		}
+	},50)	
+		};
 };
 
 /*increment game code*/

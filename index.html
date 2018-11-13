@@ -17,8 +17,8 @@
             <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine','');" id = "defaulttab">Docking</button>
             <button class="tablink" onclick="changeTab('AYAYA', this, 'pink','');">AYAYA</button>
             <button class="tablink" onclick="changeTab('Saltmine', this, 'white','spacecoast');">Saltmine</button>
-            <button class="tablink" onclick="shitstorm();changeTab('JoJo', this, 'purple','kiraqueen');">'ジョジョ'</button>
-            <button class="tablink" onclick="changeTab('Escalation', this, 'mediumaquamarine','hog');">Escalation</button>
+            <button class="tablink" onclick="shitstorm();changeTab('JoJo', this, 'purple','kiraqueen');" lang="ja-jp">'ジョジョ'</button>
+            <button class="tablink" id="escalationbutton" onclick="changeTab('Escalation', this, 'mediumaquamarine','hog');">Escalation</button>
             <button class="tablink" onclick="changeTab('Ronald', this, 'red','');">Ronald</button>
             <button class="tablink" onclick="changeTab('harambe', this, 'yellow','');">harambe</button>
         </div>
@@ -33,7 +33,7 @@
             <li>moroccan_incense</li>
             <li>the_stony_ocean</li>
             <li>what_clouds_are_made_of</li>
-            <li>平仮名, ひらがな</li>
+            <li lang="ja-jp">平仮名, ひらがな</li>
         </div>
         
         <div id="AYAYA" class="tabcontent">
@@ -66,9 +66,14 @@
 			</div>
 		</div>
 
-        <div id="Escalation" class ="tabcontent">
-            <button onclick="takeaStep(1)">Take a step.</button>
+        <div id="Escalation" class="tabcontent">
+            <button class="incrementbutton" onclick="takeaStep(1);">Take a step.</button>
             <!--<button onclick="takebStep(1)">Take a "step".</button>-->
+            <br>
+            <br>
+            <ul id="loglist" class="scrollmenu">
+                <li>You have yet to reach your destination.</li>
+            </ul>
             <p>You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
         </div>
 		

@@ -21,6 +21,10 @@ body, html {
 .tablink:hover {
   background-color: transparent;
 }
+#Escalationbutton:hover{
+  background-image: url("imagefiles/escalator.gif");
+  background-size: 100%
+}
 .tabcontent {
   color: white;
   display: none;
@@ -49,12 +53,14 @@ body, html {
 }
 #giffid{
 }
+
 #timeridiv{
 	margin: auto;
 	width:40%;
 	height:8%;
 	background-image: url("imagefiles/DIO2.png");
 }
+
 #timer{
 	
 	text-align: center;
@@ -69,4 +75,40 @@ body, html {
 	font-variant: normal;
 	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
 	text-transform: none;
+}
+/*increment game*/
+.incrementbutton{
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: normal;
+}
+.incrementbutton:hover{
+  background-color: white;
+}
+.incrementbutton:active{
+  background-color: white;
+  font-weight: bolder;
+}
+.scrollmenu{
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height:5em;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.scrollmenu li{
+  color: white;
+  list-style-type: none;
+}
+.scrollmenu li:hover{
+  color: black;
+  background-color: white;
+  font-weight: normal;
 }

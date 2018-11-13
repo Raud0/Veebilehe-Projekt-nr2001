@@ -23,7 +23,8 @@ function changeTab(pagename, element, colour,song){
 		}
 	}
 
-	takeaStep(0.5);
+	if (sidestepping){takeaStep(0.5);}
+	
 	element.style.backgroundColor = colour;
 	
 	if (pagename != "JoJo"){
@@ -34,6 +35,7 @@ function changeTab(pagename, element, colour,song){
 	};
 }
 
+/*big brain code*/
 function countdown() {
 	var Taimer = 132500;
 	document.getElementById("timeridiv").style.display = "block";
@@ -54,6 +56,9 @@ function countdown() {
 		}
 	},37);
 };
+
+
+
 function shitstorm() {
 	document.getElementById("giffid").style.display = "block"
 	document.getElementById("kiraqueen").currentTime = 0;
@@ -75,24 +80,88 @@ function shitstorm() {
 				document.getElementById("kiraqueen").pause();
 				document.getElementById("kiraqueen").id = "replace";
 				document.getElementById("kiraupgrade").id = "kiraqueen";
+				addlogmessage("You bite on some dust.");
 				changeTab('Docking', this, 'aquamarine','');
 				},14000);
 	},132500);}
 };
 
 /*increment game code*/
+var rate = 16;
+
 var asteps = 0;
 var bsteps = 0;
+var complex = false
+
+var astephighest = 0;
+var astepachievement = [5,10,50,100]
+var astepsachieved = [false,false,false,false]
+
+var astepspeed = 0.00;
+var bstepspeed = 0;
+var timespeed = 1000;
+var sidestepping = false
 
 function takeaStep(number){
-    asteps = asteps + number;
-    document.getElementById("a_steps").innerHTML = asteps;
+	asteps = asteps + number;
+	astepchecker()
 };
 function takebStep(number){
     bsteps = bsteps + number;
-    document.getElementById("b_steps").innerHTML = bsteps;
 };
 function makecomplex(){
+	complex = true;
 	document.getElementById("b_steps_i").textContent="i";
 	document.getElementById("ab_sign").textContent=" + ";
 };
+
+function updateScroll(){
+	var logdiv = document.getElementById("loglist");
+	logdiv.scrollTop = logdiv.scrollHeight;
+};
+
+function addlogmessage(logmessage){
+	var node = document.createElement("li");
+	var textnode = document.createTextNode(logmessage);
+	node.appendChild(textnode);
+	document.getElementById("loglist").appendChild(node);
+	updateScroll();
+};
+
+function astepchecker(){
+	if (asteps >= astephighest){
+		astephighest = asteps;
+		if (astephighest >= astepachievement[0] && astepsachieved[0] == false){
+			addlogmessage("You feel the ground shift beneath your feet.");
+			astepsachieved[0] = true;
+			astepspeed = astepspeed -0.01;
+		}
+		if (astephighest >= astepachievement[1] && astepsachieved[1] == false){
+			addlogmessage("Sand is cascading down the incline.");
+			astepsachieved[1] = true;
+			astepspeed = astepspeed -0.05;
+		}
+		if (astephighest >= astepachievement[2] && astepsachieved[2] == false){
+			addlogmessage("The top of the incline has started to rise away from you.");
+			astepsachieved[2] = true;
+			astepspeed = astepspeed -0.5;
+		}
+		if (astephighest >= astepachievement[3] && astepsachieved[3] == false){
+			addlogmessage("The ground disappears!");
+			astepsachieved[3] = true;
+			astepspeed = astepspeed -24;
+		}
+	};	
+};
+
+window.setInterval(function(){
+	takeaStep(astepspeed/rate);
+	takebStep(bstepspeed/rate);
+},timespeed/rate);
+
+window.setInterval(function(){
+	document.getElementById("a_steps").innerHTML = Math.round(asteps*1000)/1000;
+	if (complex){
+		document.getElementById("b_steps").innerHTML = Math.round(bsteps*1000)/1000;
+	};
+},rate);

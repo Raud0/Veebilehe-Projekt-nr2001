@@ -49,3 +49,24 @@ body, html {
 }
 #giffid{
 }
+#timeridiv{
+	margin: auto;
+	width:40%;
+	height:8%;
+	background-image: url("imagefiles/DIO2.png");
+}
+#timer{
+	
+	text-align: center;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 23px;
+	letter-spacing: 0.8px;
+	word-spacing: 1px;
+	color: #000000;
+	font-weight: 400;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: italic;
+	font-variant: normal;
+	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+	text-transform: none;
+}

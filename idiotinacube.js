@@ -1,39 +1,44 @@
 /*tab-change functionality*/
+var currentpage = "";
 function changeTab(pagename, element, colour,song){
-    var i, tabcontent, tablinks;
-    
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-
-    document.getElementById(pagename).style.display = "block";
-	var songs = ["spacecoast","kiraqueen","hog"];
-
-	for (i = 0; i < songs.length; i++) {
-		if (songs[i] == song){
-			document.getElementById(song).play();
-		} else {
-		document.getElementById(songs[i]).pause();
+	if (currentpage != pagename){
+		currentpage = pagename;
+		var i, tabcontent, tablinks;
+		
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
 		}
-	}
+		
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].style.backgroundColor = "";
+		}
 
-	if (sidestepping){takeaStep(0.5);}
-	
-	element.style.backgroundColor = colour;
-	
-	if (pagename != "JoJo"){
-		clearTimeout(Tolm);
+		document.getElementById(pagename).style.display = "block";
+		var songs = ["spacecoast","kiraqueen","hog"];
+
+		for (i = 0; i < songs.length; i++) {
+			if (songs[i] == song){
+				document.getElementById(song).play();
+			} else {
+			document.getElementById(songs[i]).pause();
+			}
+		}
+
+		if (sidestepping){takeaStep(0.5);}
+		
+		element.style.backgroundColor = colour;
+		
+		if (pagename != "JoJo"){
+			clearTimeout(Tolm);
+		};
+		if (pagename == "JoJo" && document.getElementById("kiraupgrade")){
+			countdown();
+		};
 	};
-	if (pagename == "JoJo" && document.getElementById("kiraupgrade")){
-		countdown();
-	};
-}
+		
+};
 
 /*big brain code*/
 function countdown() {
@@ -95,12 +100,12 @@ var complex = false
 
 var astephighest = 0;
 var astepachievement = [5,10,50,100]
-var astepsachieved = [false,false,false,false]
+var astepsachieved = [false,false,false,false];
 
 var astepspeed = 0.00;
 var bstepspeed = 0;
 var timespeed = 1000;
-var sidestepping = false
+var sidestepping = true;
 
 function takeaStep(number){
 	asteps = asteps + number;

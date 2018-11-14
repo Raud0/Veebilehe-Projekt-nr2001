@@ -25,6 +25,11 @@ body, html {
   background-image: url("imagefiles/escalator.gif");
   background-size: 100%
 }
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+	margin: auto;
+}
 .tabcontent {
   color: white;
   display: none;

@@ -38,17 +38,18 @@ function changeTab(pagename, element, colour,song){
 			countdown();
 			liigutaja();
 		}
-		};
-		
 	};
+		
+};
 
 /*big brain code*/
+
 
 function liigutaja() {
 	pilt = document.getElementById("SecretQueen");
 	pilt.style.display = "none";
 	var posx = 1860;
-	var posy = 600;
+	var posy = 550;
 	var liikumisintervall = setInterval(millisekund,200);
 	function millisekund(){
 		pilt.style.display = "block";
@@ -118,6 +119,7 @@ function shitstorm() {
 				document.getElementById("kiraupgrade").id = "kiraqueen";
 				window.onscroll=function(){};
 				addlogmessage("You bite on some dust.");
+				document.getElementById("JoJo").style.backgroundImage = "url('imagefiles/kirabackground2.png')";
 				changeTab('Docking', this, 'aquamarine','');
 				},14000);
 	},132500);

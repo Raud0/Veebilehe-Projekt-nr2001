@@ -68,15 +68,21 @@
 		</div>
 
         <div id="Escalation" class="tabcontent">
-            <button id="astepbutton" class="incrementbutton" onclick="takeaStep(1);">Take a step.</button>
-            <button id="bstepbutton" class="incrementbutton" onclick="takebStep(1)" style="display: none">Take a "step".</button>
-            <br>
-            <br>
-            <ul id="loglist" class="scrollmenu">
-                <li>You have yet to reach your destination.</li>
-            </ul>
-            <button id="stopfalling" class="incrementbutton" onclick="stopfalling()" style="display: none">Stop falling.</button>
-            <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
+            <div class="innerdiv">
+                <button id="astepbutton" class="incrementbutton" onclick="takeaStep(1);">Take a step.</button>
+                <button id="bstepbutton" class="incrementbutton" onclick="takebStep(1)" style="display: none">Take a "step".</button>
+                <br>
+                <ul id="loglist" class="scrollmenu">
+                    <li>You have yet to reach your destination.</li>
+                </ul>
+                <table class="shop">
+                    <tr id="stopfalling" style="display: none">
+                        <td><button  class="buttoncell" onclick="stopfalling()">Stop falling.</button></td>
+                        <td class="buycell">Cost: 100i</td>
+                    </tr>
+                </table>
+                <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
+            </div>
         </div>
 		
 		<div id="Ronald" class ="tabcontent">

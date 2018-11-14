@@ -174,11 +174,11 @@ window.setInterval(function(){
 
 function takeaStep(number){
 	asteps = asteps + number;
-	astepchecker()
+	astepchecker(true);
 };
 function takebStep(number){
 	bsteps = bsteps + number;
-	bstepchecker()
+	bstepchecker(true);
 };
 
 function takeautoaStep(number){
@@ -214,14 +214,14 @@ function addlogmessage(logmessage){
 var astephighest = 0;
 var astepachievement = [11,33,66,100,-36,-384];
 var astepsachieved = [false,false,false,false,false,false];
-function astepchecker(){
-	if (!astepsachieved[4] && asteps < astepachievement[4]){
+function astepchecker(clicked){
+	if (clicked && !astepsachieved[4] && asteps < astepachievement[4]){
 		addlogmessage("Your feet fail to find a footing.");
 		astepsachieved[4] = true;
 		document.getElementById("astepbutton").style.display = "none";
 	}
 	if (!astepsachieved[5] && asteps < astepachievement[5]){
-		addlogmessage("You've come to realize there is no bottom.");
+		addlogmessage("There is no bottom.");
 		astepsachieved[5] = true;
 		makecomplex();
 		document.getElementById("bstepbutton").style.display = "inline";
@@ -229,21 +229,21 @@ function astepchecker(){
 	if (asteps >= astephighest){
 		astephighest = asteps;
 		if (!astepsachieved[0] && astephighest >= astepachievement[0]){
-			addlogmessage("You feel the ground shift beneath your feet.");
+			addlogmessage("The ground is shifting.");
 			astepsachieved[0] = true;
 			astepspeed = astepspeed -0.01;
 		}
 		if (!astepsachieved[1] && astephighest >= astepachievement[1]){
-			addlogmessage("The top of the incline has started to rise away from you.");
+			addlogmessage("The precipice starts to rise.");
 			astepsachieved[1] = true;
 			astepspeed = astepspeed -0.5;
 		}
 		if (!astepsachieved[2] && astephighest >= astepachievement[2]){
-			addlogmessage("You're almost at your destination.");
+			addlogmessage("The top is a stone's throw away.");
 			astepsachieved[2] = true;
 		}
 		if (!astepsachieved[3] && astephighest >= astepachievement[3]){
-			addlogmessage("The ground disappears.");
+			addlogmessage("The ground crumbles! You're plummeting back to the bottom!");
 			astepsachieved[3] = true;
 			astepspeed = -9.6;
 			falling = true;
@@ -254,7 +254,7 @@ function astepchecker(){
 var bstephighest = 0;
 var bstepachievement = [100];
 var bstepsachieved = [false];
-function bstepchecker(){	
+function bstepchecker(clicked){	
 	if (bsteps >= bstephighest){
 		if (!bstepsachieved[0] && bsteps >= bstepachievement[0]){
 			bstepsachieved[0] = true;
@@ -264,13 +264,23 @@ function bstepchecker(){
 };
 
 function stopfalling(){
-	falling = false;
-	addlogmessage("Everything is relative.");
-	astepspeed = 0;
-	astepsachieved[0] = true;
-	astepsachieved[1] = true;
-	astepsachieved[2] = true;
-	astepsachieved[3] = true;
+	if (!falling){
+		addlogmessage("You're currently not falling.");
+	} else if (bsteps<100) {
+		document.getElementById("stopfalling").style.backgroundColor = "orange";
+		setTimeout(function() {
+			document.getElementById("stopfalling").style.backgroundColor = "initial";
+		}, 200);
+	} else {
+		falling = false;
+		bsteps -= 100;
+		addlogmessage("Everything is relative.");
+		astepspeed = 0;
+		astepsachieved[0] = true;
+		astepsachieved[1] = true;
+		astepsachieved[2] = true;
+		astepsachieved[3] = true;
+	}
 }
 
 window.setInterval(function(){
@@ -281,6 +291,6 @@ window.setInterval(function(){
 },rate);
 
 window.setInterval(function(){
-	astepchecker()
-	bstepchecker
+	astepchecker(false);
+	bstepchecker(false);
 },1000);

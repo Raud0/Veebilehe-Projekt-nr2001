@@ -12,7 +12,7 @@ body, html {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: none;
   font-family: "Comic Sans MS", cursive;
   font-size: 20px;
   width: 12.5%;
@@ -33,8 +33,12 @@ canvas {
 .tabcontent {
   color: white;
   display: none;
-  padding: 100px 20px;
+  padding: 80px 20px;
   height: 100%;
+}
+.innerdiv {
+  background-color: rgb(205, 219, 196);
+  padding: 20px;
 }
 #Docking {background-color: #6600ff;}
 #AYAYA {background-color: DeepPink;}
@@ -45,7 +49,7 @@ canvas {
 #JoJo {
   background-color: yellow;
   background-image: url("imagefiles/OMG MY WIFE JUST DIVORCED ME.jpg");}
-#Escalation {background-color: mediumaquamarine;}
+#Escalation {background-color: #8dc7aa;}
 #Ronald {background-color: red;}
 #harambe {
   background-color: yellow;
@@ -69,7 +73,6 @@ canvas {
 }
 
 #timer{
-	
 	text-align: center;
 	font-family: "Arial Black", Gadget, sans-serif;
 	font-size: 23px;
@@ -91,6 +94,7 @@ canvas {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: normal;
+  width: 16ch;
 }
 .incrementbutton:hover{
   background-color: white;
@@ -99,12 +103,23 @@ canvas {
   background-color: white;
   font-weight: bolder;
 }
+.counter{
+  border: 1px solid inset white;
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bolder;
+  width: 40%;
+  height: 1em;
+  overflow: hidden;
+}
 .scrollmenu{
   padding: 0;
   list-style: none;
   overflow-y: scroll;
   white-space: nowrap;
-  height:5em;
+  height:6em;
   background-color: black;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
@@ -118,4 +133,40 @@ canvas {
   color: black;
   background-color: white;
   font-weight: normal;
+}
+.shop {
+  text-align: left;
+  padding: none;
+  background-color: black
+}
+.buttoncell {
+  border-bottom: 1px solid inset white;
+  background-color: transparent;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: none;
+  width: 16ch;
+}
+.buttoncell:hover {
+  font-weight: normal;
+  border: 2px solid inset black;
+  background-color: white;
+  color: black;
+}
+.buttoncell:active {
+  font-weight: normal;
+  border: 2px solid inset white;
+  background-color: transparent;
+  color: white;
+}
+.buycell {
+  border-bottom: 1px solid white; 
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: none;
+  width: 16ch;
 }

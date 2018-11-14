@@ -68,14 +68,15 @@
 		</div>
 
         <div id="Escalation" class="tabcontent">
-            <button class="incrementbutton" onclick="takeaStep(1);">Take a step.</button>
-            <!--<button onclick="takebStep(1)">Take a "step".</button>-->
+            <button id="astepbutton" class="incrementbutton" onclick="takeaStep(1);">Take a step.</button>
+            <button id="bstepbutton" class="incrementbutton" onclick="takebStep(1)" style="display: none">Take a "step".</button>
             <br>
             <br>
             <ul id="loglist" class="scrollmenu">
                 <li>You have yet to reach your destination.</li>
             </ul>
-            <p>You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
+            <button id="stopfalling" class="incrementbutton" onclick="stopfalling()" style="display: none">Stop falling.</button>
+            <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
         </div>
 		
 		<div id="Ronald" class ="tabcontent">

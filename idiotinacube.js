@@ -38,9 +38,30 @@ function changeTab(pagename, element, colour,song){
 			countdown();
 			liigutaja();
 		}
+		/* if (pagename == "Ronald") {
+		    ronalds();
+		} */
 	};
 		
 };
+
+/*Doesn't yet work, but don't want conflicts so gon leave this in, same for the ronald above
+
+function ronalds() {
+	
+	var parameta = document.createElement("img");
+	var giffu = document.createElement("imagefiles/Insanity.gif");
+	var elemental = document.getElementById("ClownGif");
+	setInterval(giffing, 1000);
+}
+
+function giffing() {
+        parameta.appendChild(giffu);
+		elemental.appendChild(parameta);
+		setTimeout(giffing,3000);
+}
+
+*/
 
 /*big brain code*/
 

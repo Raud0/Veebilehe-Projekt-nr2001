@@ -187,8 +187,8 @@ window.setInterval(function(){
 	var astepspeedreal = astepspeed;
 	var bstepspeedreal = bstepspeed;
 	if (barying&&bsteps>barylevel/2/rate){
-		astepspeedreal = astepspeedreal - barylevel/2/rate;
-		bstepspeedreal = bstepspeedreal + barylevel/2/rate;
+		astepspeedreal = astepspeedreal + barylevel/2/rate;
+		bstepspeedreal = bstepspeedreal - barylevel/2/rate;
 	}
 	if (cycling){
 		astepspeedreal = astepspeedreal - cyclelevel*Math.sin(Math.PI*cycletime/cycledivider);

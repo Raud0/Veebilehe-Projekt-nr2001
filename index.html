@@ -49,12 +49,12 @@
 
 		<div id="JoJo" class ="tabcontent">
             <div id="giffid">
-				<img src ="imagefiles/menace.gif" width="300" height="300">
-			    <img src ="imagefiles/menace.gif" width="300" height="300">
-			    <img src ="imagefiles/menace.gif" width="300" height="300">
-				<img src ="imagefiles/menace.gif" width="300" height="300">
-				<img src ="imagefiles/menace.gif" width="300" height="300">
-				<img src ="imagefiles/menace.gif" width="300" height="300">
+				<img src ="imagefiles/menace.gif" width="16%">
+			    <img src ="imagefiles/menace.gif" width="16%">
+			    <img src ="imagefiles/menace.gif" width="16%">
+				<img src ="imagefiles/menace.gif" width="16%">
+				<img src ="imagefiles/menace.gif" width="16%">
+				<img src ="imagefiles/menace.gif" width="16%">
 			</div>
 			<br>
 			<div id ="timeridiv">
@@ -76,10 +76,17 @@
                 <ul id="loglist" class="scrollmenu">
                     <li>You have yet to reach your destination.</li>
                 </ul>
-                <table class="shop">
+                <table class="shop" id="shop" style="display: none">
+                    <tr>
+                        <th class="buycell"><span id="shopname">Parabolic principles.</span></th>
+                    </tr>
                     <tr id="stopfalling" style="display: none">
-                        <td><button  class="buttoncell" onclick="stopfalling()">Stop falling.</button></td>
+                        <td><button  class="buttoncell" onclick="purchase('stopfalling',0,0,1,100)">Stop falling.</button></td>
                         <td class="buycell">Cost: 100i</td>
+                    </tr>
+                    <tr id="barycentre" style="display: none">
+                            <td><button  class="buttoncell" onclick="purchase('barycentre',0,0,1,barycentreprice)">Merge with the barycentre.</button></td>
+                            <td class="buycell">Cost: <span id="barycentreprice">10</span>i</td>
                     </tr>
                 </table>
                 <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
@@ -103,12 +110,12 @@
 		
 		<div id="harambe" class ="tabcontent">
             <h6>Ben Brode 4Head Ben Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4Head</h6>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
-			<a href ="https://www.nicovideo.jp/watch/sm24221654" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="400" height="300"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://www.nicovideo.jp/watch/sm24221654" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
 		</div>
 
 

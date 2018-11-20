@@ -21,7 +21,7 @@ body, html {
 .tablink:hover {
   background-color: transparent;
 }
-#Escalationbutton:hover{
+#escalationbutton:hover{
   background-image: url("imagefiles/escalator.gif");
   background-size: 100%
 }
@@ -111,7 +111,7 @@ canvas {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: bolder;
-  width: 40%;
+  width: 100%;
   height: 1em;
   overflow: hidden;
 }
@@ -119,8 +119,7 @@ canvas {
   padding: 0;
   list-style: none;
   overflow-y: scroll;
-  white-space: nowrap;
-  height:6em;
+  height:5.7em;
   background-color: black;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
@@ -138,7 +137,8 @@ canvas {
 .shop {
   text-align: left;
   padding: none;
-  background-color: black
+  background-color: black;
+  width: 100%;
 }
 .buttoncell {
   border-bottom: 1px solid inset white;

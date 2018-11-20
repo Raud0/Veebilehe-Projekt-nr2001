@@ -178,10 +178,14 @@ var timespeed = 1000;
 var astepspeed = 0;
 var bstepspeed = 0;
 
+
 window.setInterval(function(){
+	if (barying&&bsteps>barylevel/2/rate){
+		takeautoaStep(+barylevel/2/rate);
+		takeautobStep(-barylevel/2/rate);
+	}
 	takeautoaStep(astepspeed/rate);
 	takeautobStep(bstepspeed/rate);
-	
 	if (falling){
 		var r_acceleration = 588.0;
 		var r_deceleration = 23.0;
@@ -211,9 +215,6 @@ function takeautobStep(number){
 	bsteps = bsteps + number;
 };
 
-var sidestepping = false;
-var falling = false;
-
 var complex = false;
 function makecomplex(){
 	complex = true;
@@ -235,7 +236,7 @@ function addlogmessage(logmessage){
 };
 
 var astephighest = 0;
-var astepachievement = [11,33,66,100,-36,-384];
+var astepachievement = [11,33,66,100,-36,-333];
 var astepsachieved = [false,false,false,false,false,false];
 function astepchecker(clicked){
 	if (clicked && !astepsachieved[4] && asteps < astepachievement[4]){
@@ -275,35 +276,65 @@ function astepchecker(clicked){
 };
 
 var bstephighest = 0;
-var bstepachievement = [100];
+var bstepachievement = [50];
 var bstepsachieved = [false];
 function bstepchecker(clicked){	
 	if (bsteps >= bstephighest){
 		if (!bstepsachieved[0] && bsteps >= bstepachievement[0]){
 			bstepsachieved[0] = true;
-			document.getElementById("stopfalling").style.display = "inline";
+			document.getElementById("shop").style.display = "block";
+			document.getElementById("stopfalling").style.display = "block";	
 		}
 	}
 };
 
-function stopfalling(){
-	if (!falling){
-		addlogmessage("You're currently not falling.");
-	} else if (bsteps<100) {
-		document.getElementById("stopfalling").style.backgroundColor = "orange";
-		setTimeout(function() {
-			document.getElementById("stopfalling").style.backgroundColor = "initial";
-		}, 200);
+var sidestepping = false;
+var falling = false;
+var falllevel = -1;
+var barycentreprice = 10;
+var barylevel = 0;
+var barying = false;
+function purchase(item,aneg,aprice,bneg,bprice){
+	if ((aneg*(asteps-aprice) >= 0) && (bneg*(bsteps-bprice) >= 0)){
+		if (item == "stopfalling"){
+			if (!falling){
+				falllevel = falllevel + 1;
+				if (falllevel == 10){
+					addlogmessage("Perhaps you're not just falling but, in fact, tumbling down along with all else to the very end of the universe.");
+					bstepspeed = bstepspeed + 1;
+					document.getElementById("stopfalling").style.display = "none";
+				} else {
+					addlogmessage("You're currently not falling.");
+				}
+			} else {
+				falling = false;
+				bsteps -= bprice;
+				addlogmessage("Everything is relative.");
+				astepspeed = 0;
+				astepsachieved[0] = true;
+				astepsachieved[1] = true;
+				astepsachieved[2] = true;
+				astepsachieved[3] = true;
+				document.getElementById("barycentre").style.display = "block";
+			};
+		};
+		if (item == "barycentre"){
+			bsteps -= bprice;
+			if (bprice == 10){
+				addlogmessage('"I am Gravity, I am that against which the Escalation must struggle, to which the pre\u2011cosmic depths submit and are transmuted to the very substance of History." -\xa0Tynchon\xa00:21');
+				barying = true;
+			};
+			barylevel = barylevel + 1;
+			barycentreprice = Math.round(barycentreprice*1.1*100)/100;
+			document.getElementById("barycentreprice").innerHTML = barycentreprice;
+		};
 	} else {
-		falling = false;
-		bsteps -= 100;
-		addlogmessage("Everything is relative.");
-		astepspeed = 0;
-		astepsachieved[0] = true;
-		astepsachieved[1] = true;
-		astepsachieved[2] = true;
-		astepsachieved[3] = true;
+		document.getElementById(item).getElementsByClassName("buycell")[0].style.backgroundColor = "darkorange";
+			setTimeout(function() {
+				document.getElementById(item).getElementsByClassName("buycell")[0].style.backgroundColor = "initial";
+			}, 100);
 	}
+		
 }
 
 window.setInterval(function(){

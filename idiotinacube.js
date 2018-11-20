@@ -169,23 +169,34 @@ function shitstorm() {
 	};
 };
 
-/*increment game code*/
+/*increment game code, clickmod=1 and rate=16 are the default values*/
+var clickmod = 1;
+
 var asteps = 0;
 var bsteps = 0;
 
 var rate = 16;
 var timespeed = 1000;
+var cycletime = 0;
 var astepspeed = 0;
 var bstepspeed = 0;
+var cycledivider = 2500;
 
 
 window.setInterval(function(){
+	var astepspeedreal = astepspeed;
+	var bstepspeedreal = bstepspeed;
 	if (barying&&bsteps>barylevel/2/rate){
-		takeautoaStep(+barylevel/2/rate);
-		takeautobStep(-barylevel/2/rate);
+		astepspeedreal = astepspeedreal - barylevel/2/rate;
+		bstepspeedreal = bstepspeedreal + barylevel/2/rate;
 	}
-	takeautoaStep(astepspeed/rate);
-	takeautobStep(bstepspeed/rate);
+	if (cycling){
+		astepspeedreal = astepspeedreal - cyclelevel*Math.sin(Math.PI*cycletime/cycledivider);
+		bstepspeedreal = bstepspeedreal + cyclelevel*Math.sin(Math.PI*cycletime/cycledivider);
+		cycletime = cycletime + rate;
+	}
+	takeautoaStep(astepspeedreal/rate);
+	takeautobStep(bstepspeedreal/rate);
 	if (falling){
 		var r_acceleration = 588.0;
 		var r_deceleration = 23.0;
@@ -200,11 +211,11 @@ window.setInterval(function(){
 },timespeed/rate);
 
 function takeaStep(number){
-	asteps = asteps + number;
+	asteps = asteps + number*clickmod;
 	astepchecker(true);
 };
 function takebStep(number){
-	bsteps = bsteps + number;
+	bsteps = bsteps + number*clickmod;
 	bstepchecker(true);
 };
 
@@ -276,16 +287,16 @@ function astepchecker(clicked){
 };
 
 var bstephighest = 0;
-var bstepachievement = [50];
+var bstepachievement = [3];
 var bstepsachieved = [false];
 function bstepchecker(clicked){	
 	if (bsteps >= bstephighest){
 		if (!bstepsachieved[0] && bsteps >= bstepachievement[0]){
 			bstepsachieved[0] = true;
 			document.getElementById("shop").style.display = "block";
-			document.getElementById("stopfalling").style.display = "block";	
-		}
-	}
+			document.getElementById("parabolic").style.display = "block";
+		};
+	};
 };
 
 var sidestepping = false;
@@ -294,13 +305,30 @@ var falllevel = -1;
 var barycentreprice = 10;
 var barylevel = 0;
 var barying = false;
+var cycleprice = 1;
+var cyclelevel = 0;
+var cycling = false;
 function purchase(item,aneg,aprice,bneg,bprice){
 	if ((aneg*(asteps-aprice) >= 0) && (bneg*(bsteps-bprice) >= 0)){
+		if (item == "parabolic"){
+			bsteps -= bprice;
+			addlogmessage('"For in the secret hour of life\'s midday the parabola is reversed, death is born."  -\xa0Carl\xa0Jung,\xa0The\xa0Soul\xa0and\xa0Death\xa00:21');
+			document.getElementById("shop1").style.display = "block";
+			document.getElementById("stopfalling").style.display = "block";	
+			document.getElementById("parabolic").style.display = "none";	
+		};
+		if (item == "periodic"){
+			bsteps -= bprice;
+			addlogmessage("All that rises, must one day fall. And as this fact holds so does its inverse.");
+			document.getElementById("shop2").style.display = "block";
+			document.getElementById("cycle").style.display = "block";
+			document.getElementById("periodic").style.display = "none";	
+		};
 		if (item == "stopfalling"){
 			if (!falling){
 				falllevel = falllevel + 1;
 				if (falllevel == 10){
-					addlogmessage("Perhaps you're not just falling but, in fact, tumbling down along with all else to the very end of the universe.");
+					addlogmessage("Perhaps you're not just falling but, in fact, tumbling down, along with all else, to the primeval womb of the universe.");
 					bstepspeed = bstepspeed + 1;
 					document.getElementById("stopfalling").style.display = "none";
 				} else {
@@ -321,12 +349,25 @@ function purchase(item,aneg,aprice,bneg,bprice){
 		if (item == "barycentre"){
 			bsteps -= bprice;
 			if (bprice == 10){
-				addlogmessage('"I am Gravity, I am that against which the Escalation must struggle, to which the pre\u2011cosmic depths submit and are transmuted to the very substance of History." -\xa0Tynchon\xa00:21');
+				addlogmessage('"I am Gravity, I am that against which the Escalation must struggle, to which the meaningless pre\u2011cosmic vastnesses submit and are transmuted to the very substance of History." -\xa0Tynchon\xa00:21');
 				barying = true;
 			};
 			barylevel = barylevel + 1;
 			barycentreprice = Math.round(barycentreprice*1.1*100)/100;
 			document.getElementById("barycentreprice").innerHTML = barycentreprice;
+			if (barylevel >= 4){
+				document.getElementById("periodic").style.display = "block";
+			}
+		};
+		if (item == "cycle"){
+			bsteps -= bprice;
+			if (bprice == 1){
+				addlogmessage("");
+				cycling = true;
+			};
+			cyclelevel = cyclelevel + 1;
+			cycleprice = cycleprice + 1;
+			document.getElementById("cycleprice").innerHTML = cycleprice;
 		};
 	} else {
 		document.getElementById(item).getElementsByClassName("buycell")[0].style.backgroundColor = "darkorange";

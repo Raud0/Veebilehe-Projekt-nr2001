@@ -148,7 +148,7 @@ canvas {
   font-size: 16px;
   font-weight: bolder;
   padding: none;
-  width: 16ch;
+  width: 40ch;
 }
 .buttoncell:hover {
   font-weight: normal;
@@ -169,5 +169,5 @@ canvas {
   font-size: 16px;
   font-weight: bolder;
   padding: none;
-  width: 16ch;
+  width: 40ch;
 }

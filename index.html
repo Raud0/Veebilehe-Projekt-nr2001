@@ -60,7 +60,7 @@
 			<div id ="timeridiv">
 				<p id = "timer"></p>
 			</div>
-			<img id = "SecretQueen" src ="imagefiles/SecretQueen.png" width = "600" height="588">
+			<img id = "SecretQueen" src ="imagefiles/Secretqueen.png" width = "600" height="588">
 			<div id ="big_video">
 				<video width=100% height=100% controls id = "Peepee">
 				    <source src="imagefiles/bite_the_dick.mp4">
@@ -77,8 +77,16 @@
                     <li>You have yet to reach your destination.</li>
                 </ul>
                 <table class="shop" id="shop" style="display: none">
+                    <tr id="parabolic" style="display: none">
+                        <td><button  class="buttoncell" onclick="purchase('parabolic',0,0,1,10)">Study the Parabola.</button></td>
+                        <td class="buycell">Cost: 10i</td>
+                    </tr>
+                    <tr id="periodic" style="display: none">
+                        <td><button  class="buttoncell" onclick="purchase('periodic',0,0,1,50)">Study the Oscillation.</button></td>
+                        <td class="buycell">Cost: 50i</td>
+                    </tr>
                     <tr>
-                        <th class="buycell"><span id="shopname">Parabolic principles.</span></th>
+                        <th class="buycell" id="shop1" style="display: none"><span id="shopname1">Parabolic principles.</span></th>
                     </tr>
                     <tr id="stopfalling" style="display: none">
                         <td><button  class="buttoncell" onclick="purchase('stopfalling',0,0,1,100)">Stop falling.</button></td>
@@ -87,6 +95,13 @@
                     <tr id="barycentre" style="display: none">
                             <td><button  class="buttoncell" onclick="purchase('barycentre',0,0,1,barycentreprice)">Merge with the barycentre.</button></td>
                             <td class="buycell">Cost: <span id="barycentreprice">10</span>i</td>
+                    </tr>
+                    <tr>
+                        <th class="buycell" id="shop2" style="display: none"><span id="shopname2">Periodic principles.</span></th>
+                    </tr>
+                    <tr id="cycle" style="display: none">
+                        <td><button  class="buttoncell" onclick="purchase('cycle',0,0,1,cycleprice)">Resonate with the Cycle.</button></td>
+                        <td class="buycell">Cost: <span id="cycleprice">1</span>i</td>
                     </tr>
                 </table>
                 <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>

@@ -182,21 +182,29 @@ var astepspeed = 0;
 var bstepspeed = 0;
 var cycledivider = 2500;
 
+var globaltime = 0;
+var falltime = 0;
+var falltimestart = 0;
+var falltimeend = 0;
 
 window.setInterval(function(){
 	var astepspeedreal = astepspeed;
 	var bstepspeedreal = bstepspeed;
+	
 	if (barying&&bsteps>barylevel/2/rate){
 		astepspeedreal = astepspeedreal + barylevel/2;
 		bstepspeedreal = bstepspeedreal - barylevel/2;
 	}
+	
 	if (cycling){
 		astepspeedreal = astepspeedreal - cyclelevel*Math.sin(Math.PI*cycletime/cycledivider);
 		bstepspeedreal = bstepspeedreal + cyclelevel*Math.sin(Math.PI*cycletime/cycledivider);
 		cycletime = cycletime + rate;
 	}
+	
 	takeautoaStep(astepspeedreal/rate);
 	takeautobStep(bstepspeedreal/rate);
+	
 	if (falling){
 		var r_acceleration = 588.0;
 		var r_deceleration = 23.0;
@@ -206,8 +214,11 @@ window.setInterval(function(){
 		} else {
 			r_deceletarion = r_deceleration + 17;
 		}
-		astepspeed -= 9.8*((r_acceleration-r_deceleration)/r_acceleration)*(rate/timespeed);
+		astepspeed -= (9.8/0.3)*((r_acceleration-r_deceleration)/r_acceleration)*(rate/timespeed);
+		falltime = falltime + timespeed/rate;
 	}
+
+	globaltime = globaltime + timespeed/rate;
 },timespeed/rate);
 
 function takeaStep(number){
@@ -231,6 +242,7 @@ function makecomplex(){
 	complex = true;
 	document.getElementById("b_steps_i").textContent="i";
 	document.getElementById("ab_sign").textContent=" + ";
+	document.getElementById("speed_sign").textContent=" and \"the speed\" of ";
 };
 
 function updateScroll(){
@@ -280,8 +292,9 @@ function astepchecker(clicked){
 		if (!astepsachieved[3] && astephighest >= astepachievement[3]){
 			addlogmessage("The ground crumbles! You're plummeting back to the bottom!");
 			astepsachieved[3] = true;
-			astepspeed = -9.6;
+			astepspeed = -9.6/0.3;
 			falling = true;
+			document.getElementById("fall_sign").textContent=" and falling for ";
 		}
 	};	
 };
@@ -302,6 +315,8 @@ function bstepchecker(clicked){
 var sidestepping = false;
 var falling = false;
 var falllevel = -1;
+var falldepth = 0;
+var fall_parabola = 0;
 var barycentreprice = 10;
 var barylevel = 0;
 var barying = false;
@@ -312,7 +327,7 @@ function purchase(item,aneg,aprice,bneg,bprice){
 	if ((aneg*(asteps-aprice) >= 0) && (bneg*(bsteps-bprice) >= 0)){
 		if (item == "parabolic"){
 			bsteps -= bprice;
-			addlogmessage('"For in the secret hour of life\'s midday the parabola is reversed, death is born."  -\xa0Carl\xa0Jung,\xa0The\xa0Soul\xa0and\xa0Death\xa00:21');
+			addlogmessage('"For in the secret hour of life\'s midday the parabola is reversed, death is born."  -\xa0Carl\xa0Jung,\xa0The\xa0Soul\xa0and\xa0Death\xa0');
 			document.getElementById("shop1").style.display = "block";
 			document.getElementById("stopfalling").style.display = "block";	
 			document.getElementById("parabolic").style.display = "none";	
@@ -336,6 +351,8 @@ function purchase(item,aneg,aprice,bneg,bprice){
 				}
 			} else {
 				falling = false;
+				falldepth = 100 - asteps;
+				fall_parabola = 2*falldepth/(falltime/timespeed);
 				bsteps -= bprice;
 				addlogmessage("Everything is relative.");
 				astepspeed = 0;
@@ -379,11 +396,41 @@ function purchase(item,aneg,aprice,bneg,bprice){
 }
 
 window.setInterval(function(){
+	
 	document.getElementById("a_steps").innerHTML = Math.round(asteps*1000)/1000;
 	if (complex){
 		document.getElementById("b_steps").innerHTML = Math.round(bsteps*1000)/1000;
 	};
+	
+	if (falling){
+		document.getElementById("fall_seconds").innerHTML = Math.round(falltime/1000);
+	};
+	document.getElementById("seconds").innerHTML = Math.round(globaltime/1000);
+
 },rate);
+
+var previous_asteps = 0;
+var previous1_asteps = 0;
+var previous2_asteps = 0;
+var previous_bsteps = 0;
+var previous1_bsteps = 0;
+var previous2_bsteps = 0;
+window.setInterval(function(){
+	
+	var average_aspeed = (asteps - previous2_asteps)*(4/3);
+	previous2_asteps = previous1_asteps;
+	previous1_asteps = previous_asteps;
+	previous_asteps = asteps;
+	document.getElementById("a_speed").innerHTML = Math.round(average_aspeed*1000)/1000;
+	if (complex){
+		var average_bspeed = (bsteps - previous2_bsteps)*(4/3);
+		previous2_bsteps = previous1_bsteps;
+		previous1_bsteps = previous_bsteps;
+		previous_bsteps = bsteps;
+		document.getElementById("b_speed").innerHTML = Math.round(average_bspeed*1000)/1000;
+	};
+
+},timespeed/4);
 
 window.setInterval(function(){
 	astepchecker(false);

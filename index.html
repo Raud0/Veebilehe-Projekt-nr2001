@@ -16,7 +16,7 @@
 
         <div id="tablist">
             <button class="tablink" onclick="changeTab('Docking', this, 'aquamarine','');" id = "defaulttab">Docking</button>
-            <button class="tablink" onclick="changeTab('AYAYA', this, 'pink','');">AYAYA</button>
+            <button class="tablink" onclick="changeTab('AYAYA', this, 'pink','');" lang="ja-jp">ゾーン</button>
             <button class="tablink" onclick="changeTab('Saltmine', this, 'white','spacecoast');">Saltmine</button>
             <button class="tablink" onclick="changeTab('JoJo', this, 'purple','kiraqueen');" lang="ja-jp">'ジョジョ'</button>
             <button class="tablink" id="escalationbutton" onclick="changeTab('Escalation', this, 'mediumaquamarine','hog');">Escalation</button>
@@ -37,9 +37,14 @@
             <li lang="ja-jp">平仮名, ひらがな</li>
         </div>
         
-        <div id="AYAYA" class="tabcontent">
-            <h2>AYAYA</h2>
-            <a href ="https://www.youtube.com/watch?v=D0q0QeQbw9U" target ="_blank"><img src ="imagefiles/ayaya.gif" alt = "A bunch of weebs calling out a name" width="455" height="262"> </a>
+        <div id="AYAYA" class="tabcontent"> 
+            <div class="column" width="100px">
+                <a href ="https://www.youtube.com/watch?v=D0q0QeQbw9U" target ="_blank"><img src ="imagefiles/gachimuchi.gif" alt = "A bunch of weebs calling out a name"></a>
+            </div>
+            <div class="column" width="100px">
+                <h1 lang="ja-jp"><span class="wtxt1">連</span><span class="wtxt2">合</span><span class="wtxt3">軍</span><span class="wtxt4">占</span><span class="wtxt5">領</span><span class="wtxt6">地</span></h1>
+                <h4>Who are we but a bunch of weebs. And this is our <span class="changelink" onclick="document.getElementById('defaulttab').click();">docking</span>.</h4>
+            </div>
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/D0q0QeQbw9U?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
 
@@ -106,7 +111,7 @@
                 </table>
                 <p class="counter">You have taken <span id="a_steps">0</span><span id="a_steps_i"></span><span id="ab_sign"></span><span id="b_steps"></span><span id="b_steps_i"></span> steps.</p>
                 <p class="counter">You have been wandering for <span id="seconds">0</span><span id="fall_sign"></span><span id="fall_seconds"></span> seconds.</p>
-                <p class="counter" id="speed_counter">You are currently travelling at the speed of <span id="a_speed">0</span><span id="speed_sign"></span><span id="b_speed"></span> feet a second.</p>
+                <p class="counter" id="speed_counter" style="display: none">You are currently travelling at the speed of <span id="a_speed">0</span><span id="speed_sign"></span><span id="b_speed"></span> feet a second.</p>
             </div>
         </div>
 		

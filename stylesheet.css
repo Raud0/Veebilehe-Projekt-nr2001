@@ -36,6 +36,10 @@ canvas {
   padding: 80px 20px;
   height: 100%;
 }
+.column {
+  float: left;
+  padding: 20px;
+}
 .innerdiv {
   background-color: rgb(205, 219, 196);
   padding: 20px;
@@ -55,6 +59,19 @@ canvas {
   background-color: yellow;
   background-image: url("imagefiles/NotKripp.png");}
 #Why {color: yellow;}
+.wtxt1:hover{color: blue;}
+.wtxt2:hover{color: darkorange;}
+.wtxt3:hover{color: darkmagenta;}
+.wtxt4:hover{color: orchid;}
+.wtxt5:hover{color: orangered;}
+.wtxt6:hover{color: greenyellow;}
+.changelink{
+  color: darkblue;
+}
+.changelink:hover{
+  color: blue;
+  cursor: pointer;
+}
 
 /*special case a_la andreas*/
 #big_video{

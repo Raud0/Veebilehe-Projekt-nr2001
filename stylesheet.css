@@ -25,11 +25,13 @@ body, html {
   background-image: url("imagefiles/escalator.gif");
   background-size: 100%
 }
+/* no idea what this is
 canvas {
-    border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  background-color: #f1f1f1;
 	margin: auto;
 }
+*/
 .tabcontent {
   color: white;
   display: none;
@@ -38,7 +40,13 @@ canvas {
 }
 .column {
   float: left;
+  margin: 10px;
   padding: 20px;
+}
+.row {
+  margin-bottom: 20px;
+  content: "";
+  clear: both;
 }
 .innerdiv {
   background-color: rgb(205, 219, 196);
@@ -66,10 +74,10 @@ canvas {
 .wtxt5:hover{color: orangered;}
 .wtxt6:hover{color: greenyellow;}
 .changelink{
-  color: darkblue;
+  color: darkorange;
 }
 .changelink:hover{
-  color: blue;
+  color: red;
   cursor: pointer;
 }
 

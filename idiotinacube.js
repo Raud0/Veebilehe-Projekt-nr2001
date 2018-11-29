@@ -38,6 +38,11 @@ function changeTab(pagename, element, colour,song){
 			countdown();
 			liigutaja();
 		}
+
+		if (pagename == "AYAYA"){
+			document.getElementById("shibuya").play();
+		};
+
 		/* if (pagename == "Ronald") {
 		    ronalds();
 		} */

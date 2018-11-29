@@ -170,9 +170,27 @@ function shitstorm() {
 				clearInterval(Intervall);
 			}
 
-		},50)
+		},50);
 	};
 };
+
+/*ayaya code*/
+var colourlist = ["Gold","Aqua","SpringGreen","Orange","Magenta","Yellow","Lime","Seashell","Red","LightSkyBlue","GreenYellow","MediumVioletRed"];
+window.setInterval(function(){
+	colourlist.unshift(colourlist.pop());
+	document.getElementById("r1").style.color = colourlist[0];
+	document.getElementById("r2").style.color = colourlist[1];
+	document.getElementById("r3").style.color = colourlist[2];
+	document.getElementById("r4").style.color = colourlist[3];
+	document.getElementById("r5").style.color = colourlist[4];
+	document.getElementById("r6").style.color = colourlist[5];
+	document.getElementById("r7").style.color = colourlist[6];
+	document.getElementById("r8").style.color = colourlist[7];
+	document.getElementById("r9").style.color = colourlist[8];
+	document.getElementById("r10").style.color = colourlist[9];
+	document.getElementById("r11").style.color = colourlist[10];
+	document.getElementById("r12").style.color = colourlist[11];
+},350);
 
 /*increment game code, clickmod=1 and rate=16 are the default values*/
 var clickmod = 1;

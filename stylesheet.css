@@ -42,11 +42,13 @@ canvas {
   float: left;
   margin: 10px;
   padding: 20px;
+  position: relative;
 }
 .row {
   margin-bottom: 20px;
   content: "";
   clear: both;
+  position: relative;
 }
 .innerdiv {
   background-color: rgb(205, 219, 196);
@@ -79,6 +81,22 @@ canvas {
 .changelink:hover{
   color: red;
   cursor: pointer;
+}
+.zonebutton{
+  border: none;
+  background-color: black;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  padding-left: 1ch;
+  padding-right: 1ch;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: bolder;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
 }
 
 /*special case a_la andreas*/

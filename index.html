@@ -6,6 +6,7 @@
         <meta charset=UTF-8>
         <script src="idiotinacube.js" rel="script"></script>
         <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        <title>Some Morning Excercises in Futility</title>
     </head>
     <body>
         
@@ -26,15 +27,17 @@
             
         <div id="Docking" class="tabcontent">
             <h2>Docking</h2>
-            <li>funk_your_bricks</li>
-            <li>clay_sand</li>
-            <li>glass</li>
-            <li>wooden_panelling</li>
-            <li>turtle_fur</li>
-            <li>moroccan_incense</li>
-            <li>the_stony_ocean</li>
-            <li>what_clouds_are_made_of</li>
-            <li lang="ja-jp">平仮名, ひらがな</li>
+            <ul>
+                <li>clay_sand</li>
+                <li>glass</li>
+                <li>wooden_panelling</li>
+                <li>turtle_fur</li>
+                <li>moroccan_incense</li>
+                <li>the_stony_ocean</li>
+                <li>what_clouds_are_made_of</li>
+                <li lang="ja-jp">平仮名, ひらがな</li>
+                <li>funk_your_bricks</li>
+            </ul>  
         </div>
         
         <div id="AYAYA" class="tabcontent"> 
@@ -45,7 +48,10 @@
                     </div>
                     <div class="column" style = "height:100%; width:65%; background-color: midnightblue;">
                         <h1 lang="ja-jp"><span class="wtxt1">連</span><span class="wtxt2">合</span><span class="wtxt3">軍</span><span class="wtxt4">占</span><span class="wtxt5">領</span><span class="wtxt6">地</span></h1>
-                        <p>Who are we but a bunch of weebs. And this is our <span class="changelink" onclick="document.getElementById('defaulttab').click();">docking</span>.</p>
+                        <p>
+                            Who are we but a bunch of weebs. And this is our <span class="changelink" onclick="document.getElementById('defaulttab').click();">docking</span>.
+                        </p>
+                        <button class="zonebutton"><span id="r1">E</span><span id="r2">N</span><span id="r3">T</span><span id="r4">E</span><span id="r5">R</span> <span id="r6">T</span><span id="r7">H</span><span id="r8">E</span> <span id="r9">Z</span><span id="r10">O</span><span id="r11">N</span><span id="r12">E</span></button>
                     </div>
                     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/D0q0QeQbw9U?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
@@ -53,7 +59,7 @@
                 <br>
                 <div class="row" style="height:60%; width: calc(90% + 60px);">
                     <div class="column" style = "padding: 0px; width:100%; height:100%; background-color: black; display: flex; align-items: center; justify-content: center">
-                        <video id="shibuya" style="height:100%" src="imagefiles/shibuyacrossing.mp4"></video>
+                        <video id="shibuya" style="height:100%" src="imagefiles/shibuyacrossing.mp4" loop></video>
                     </div>
                 </div>
             </div>
@@ -65,20 +71,20 @@
 
 		<div id="JoJo" class ="tabcontent">
             <div id="giffid">
-				<img src ="imagefiles/menace.gif" width="16%">
-			    <img src ="imagefiles/menace.gif" width="16%">
-			    <img src ="imagefiles/menace.gif" width="16%">
-				<img src ="imagefiles/menace.gif" width="16%">
-				<img src ="imagefiles/menace.gif" width="16%">
-				<img src ="imagefiles/menace.gif" width="16%">
+				<img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
+			    <img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
+			    <img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
+				<img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
+				<img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
+				<img src ="imagefiles/menace.gif" style="width:16%" alt = "menacing">
 			</div>
 			<br>
 			<div id ="timeridiv">
 				<p id = "timer"></p>
 			</div>
-			<img id = "SecretQueen" src ="imagefiles/Secretqueen.png" width = "600" height="588">
+			<img id = "SecretQueen" src ="imagefiles/Secretqueen.png" style="width:600px; height:588px" alt="a secret queen">
 			<div id ="big_video">
-				<video width=100% height=100% controls id = "Peepee">
+				<video style="width:100%; height:100%;" controls id = "Peepee">
 				    <source src="imagefiles/bite_the_dick.mp4">
 				</video>
 			</div>
@@ -101,9 +107,7 @@
                         <td><button  class="buttoncell" onclick="purchase('periodic',0,0,1,50)">Study the Oscillation.</button></td>
                         <td class="buycell">Cost: 50i</td>
                     </tr>
-                    <tr>
-                        <th class="buycell" id="shop1" style="display: none"><span id="shopname1">Parabolic principles.</span></th>
-                    </tr>
+                    <th class="buycell" id="shop1" style="display: none"><span id="shopname1">Parabolic principles.</span></th>
                     <tr id="stopfalling" style="display: none">
                         <td><button  class="buttoncell" onclick="purchase('stopfalling',0,0,1,100)">Stop falling.</button></td>
                         <td class="buycell">Cost: 100i</td>
@@ -112,9 +116,7 @@
                             <td><button  class="buttoncell" onclick="purchase('barycentre',0,0,1,barycentreprice)">Merge with the barycentre.</button></td>
                             <td class="buycell">Cost: <span id="barycentreprice">10</span>i</td>
                     </tr>
-                    <tr>
-                        <th class="buycell" id="shop2" style="display: none"><span id="shopname2">Periodic principles.</span></th>
-                    </tr>
+                    <th class="buycell" id="shop2" style="display: none"><span id="shopname2">Periodic principles.</span></th>
                     <tr id="cycle" style="display: none">
                         <td><button  class="buttoncell" onclick="purchase('cycle',0,0,1,cycleprice)">Resonate with the Cycle.</button></td>
                         <td class="buycell">Cost: <span id="cycleprice">1</span>i</td>
@@ -128,14 +130,14 @@
 		
 		<div id="Ronald" class ="tabcontent">
 		    <div id="Why">
-		        <h1>Ronald sees you<h1>
-			    <h2>Ronald smells you<h2>
-			    <h3>Ronald knows you are alone<h3>
-			    <h4>Ronald knows how to hurt you<h4>
-			    <h5>Ronald wants you to beg<h5>
-			    <h6>Play record<h6>
+		        <h1>Ronald sees you</h1>
+			    <h2>Ronald smells you</h2>
+			    <h3>Ronald knows you are alone</h3>
+			    <h4>Ronald knows how to hurt you</h4>
+			    <h5>Ronald wants you to beg</h5>
+			    <h6>Play record</h6>
 			</div>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/lI5YFVagu8M" frameborder="0" allowfullscreen></iframe> 
+			<iframe style="width:560px; height:315px; border: 0px" src="https://www.youtube.com/embed/lI5YFVagu8M" allowfullscreen></iframe> 
 			<div id="ClownGif">
 			    <!-- <img src="imagefiles/Insanity.gif" id ="ClownGif1"> -->
 			</div>
@@ -143,12 +145,12 @@
 		
 		<div id="harambe" class ="tabcontent">
             <h6>Ben Brode 4Head Ben Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4HeadBen Brode 4Head</h6>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
-			<a href ="https://www.nicovideo.jp/watch/sm24221654" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
-			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" width="32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
+			<a href ="https://www.nicovideo.jp/watch/sm24221654" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
+			<a href ="https://graphbook.cs.ut.ee" target ="_blank"><img src ="imagefiles/pappaShkreli.png" alt = "Daddy" style="width:32%"> </a>
 		</div>
 
 

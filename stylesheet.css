@@ -148,7 +148,8 @@ canvas {
   font-weight: bolder;
 }
 .counter{
-  border: 1px solid inset white;
+  border: 1px solid white;
+  border-style: inset;
   background-color: black;
   color: white;
   font-family: 'Courier New', Courier, monospace;
@@ -184,7 +185,8 @@ canvas {
   width: 100%;
 }
 .buttoncell {
-  border-bottom: 1px solid inset white;
+  border-bottom: 1px solid white;
+  border-style: inset;
   background-color: transparent;
   color: white;
   font-family: 'Courier New', Courier, monospace;
@@ -195,13 +197,15 @@ canvas {
 }
 .buttoncell:hover {
   font-weight: normal;
-  border: 2px solid inset black;
+  border: 2px solid black;
+  border-style: inset;
   background-color: white;
   color: black;
 }
 .buttoncell:active {
   font-weight: normal;
-  border: 2px solid inset white;
+  border: 2px solid white;
+  border-style: inset;
   background-color: transparent;
   color: white;
 }

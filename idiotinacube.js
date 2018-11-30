@@ -26,7 +26,7 @@ function changeTab(pagename, element, colour,song){
 			} else {
 			document.getElementById(songs[i]).pause();
 			}
-		}
+		};
 
 		if (sidestepping){takeaStep(0.5);}
 		
@@ -175,9 +175,16 @@ function shitstorm() {
 };
 
 /*ayaya code*/
+function RndInt(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
 var colourlist = ["Gold","Aqua","SpringGreen","Orange","Magenta","Yellow","Lime","Seashell","Red","LightSkyBlue","GreenYellow","MediumVioletRed"];
+
 window.setInterval(function(){
+
 	colourlist.unshift(colourlist.pop());
+
 	document.getElementById("r1").style.color = colourlist[0];
 	document.getElementById("r2").style.color = colourlist[1];
 	document.getElementById("r3").style.color = colourlist[2];
@@ -190,7 +197,77 @@ window.setInterval(function(){
 	document.getElementById("r10").style.color = colourlist[9];
 	document.getElementById("r11").style.color = colourlist[10];
 	document.getElementById("r12").style.color = colourlist[11];
+
 },350);
+
+var q6 = ["They","the CONNECTED","we","traps","the dead","they","the gods","men","the kings","mothers","PAEDOPHILES"];
+var q1 = ["the unconnected","a bunch of weebs","star-crossed lovers","the extinct","the fateless"];
+var q2 = ["song","home","gestalt","our motherland","zone","docking","fate","GREAT WAR","feast","dance","purpose","zone","PRESENT"];
+var q3 = ["The British G-5","The Red Army Choir","They","The geriatrics","The German scientists","The Mongols","The natives","The Herero","The bureacrats","The wired","The hypermodernists","The annihilists","The pancake masters"];
+var q4 = ["Japanese Zeros","the paparazzi","louds blasts","the choirs of angels","the hungry","the ceaseless public hangins","humanity's oldest friend","the smell of sizzling bacon","GOD"];
+var q5 = ["silent","strange","odd","hauntingly quite","pristine","uncomfortable","awkward","open","nostalgic","PRESENT"];
+var q7 = ["the horizonless sea","U.S.S.R.","our old home","the blasted heath","the PRESENT","the shelled waste","our prison"];
+var q8 = ["the BEFORE","the great mountainrange","the old forest","the promised land","Acheron","Stix","graves waiting for their fill"];
+var q9 = ["Wish you were here","If only you were alive to see this","You should visit","I know a nice place around here we could go to one, once you come around","You can't understand unless you see it with your own eyes","They won't let me leave"];
+var q10 = ["the bombs drop","the pope visits","the peace treaties are signed","the people are forced to leave","the last man is exectued","the food runs out","the war ends","the people remember they should be GROWING OLD","DOOMSDAY arrives"];
+var q11 = ["one","in sync","together","of the same belief","alone","connected","in love","everyone","bondage","schizophrenic","a somnambulist","drunk","directionless","confused"];
+var q12 = ["place","juncture","junction of refugees","shantytown","metropolis","TUMBLE","zone","decomposing garden","picadilly circus"];
+var q13 = ["get lost","fall in love","lose oneself","end up finding new and interesting people","commit a murder","fall into line","become a part of the great hullabaloo","get into jazz","turn red","end up dead"];
+var q14 = ["don't be humble, take a TUMBLE","THANATOS is patient","SALAMI goes best with Polish bread","moonlight cocktail isn't real","everything is a cyclical","the zero","I'm being hunted","I never was","kindness and cruelty lie side by side in the strangest places","the world is funny"];
+var q15 = ["spend a night","come","drink with a stranger","dance the dance","become found","start to think","forget your name","find your past","get your home stolen"];
+var q16 = ["beat","pulse","rhythm","heartbeat","jazz","current","zone","chemicals","thought","want","strangeness","despair","mood"];
+var q17 = ["I've finally made it","I've completely lost it","I found my zero","They have lost me","the answer isn't here","I shouldn't leave","my shadow has peeled off of me","I'm the hero of a pulp noir","I'm approaching zero","there are 11 time-zones","I've drunk too much"];
+var q18 = ["Where are the Snowdens of yesteryear?","Who killed Cpt. Alex?","Why didn't you tell the word?","How can you know that?","Why haven't left yet?","Help! I'm inside the wall?","Do you have any idea how a moldy SALAMI sandwich must feel? Do you?","Why haven't we?","Here's to it!"];
+var q19 = ["get going","hurry up","lose my shadow","get some sleep","hide","be there","perform","say something","... best I didn't tell you","wish you well for now"];
+var q20 = ["Faithfully","Sincerely","Hatefully","in Death","Forever","Only","With all my Heart","In practice only","In thought"];
+var q21 = ["Yossarian","The Dr.","Dearest Friend","Mike","Bob","Jack","Alice","Nora","Victoria","Elizabeth","GOD","The last free man in the West","Dude","A fellow traveller","John Titor"];
+var q22 = ["What's more","By the by","Strangely enough","Also, I think that you should known","Anyways","Fianlly","As expected"];
+
+var changeinterval = 1000;
+window.setInterval(function(){
+
+	document.getElementById("q1").innerHTML = q1[RndInt(0,q1.length)];
+	document.getElementById("q2").innerHTML = q2[RndInt(0,q2.length)];
+	document.getElementById("q3").innerHTML = q3[RndInt(0,q3.length)];
+	document.getElementById("q4").innerHTML = q4[RndInt(0,q4.length)];
+	document.getElementById("q5").innerHTML = q5[RndInt(0,q5.length)];
+	document.getElementById("q6").innerHTML = q6[RndInt(0,q6.length)];
+	document.getElementById("q7").innerHTML = q7[RndInt(0,q7.length)];
+	document.getElementById("q8").innerHTML = q8[RndInt(0,q8.length)];
+	document.getElementById("q9").innerHTML = q9[RndInt(0,q9.length)];
+	document.getElementById("q10").innerHTML = q10[RndInt(0,q10.length)];
+	document.getElementById("q11").innerHTML = q11[RndInt(0,q11.length)];
+	document.getElementById("q12").innerHTML = q12[RndInt(0,q12.length)];
+	document.getElementById("q13").innerHTML = q13[RndInt(0,q13.length)];
+	document.getElementById("q14").innerHTML = q14[RndInt(0,q14.length)];
+	document.getElementById("q15").innerHTML = q15[RndInt(0,q15.length)];
+	document.getElementById("q16").innerHTML = q16[RndInt(0,q16.length)];
+	document.getElementById("q17").innerHTML = q17[RndInt(0,q17.length)];
+	document.getElementById("q18").innerHTML = q18[RndInt(0,q18.length)];
+	document.getElementById("q19").innerHTML = q19[RndInt(0,q19.length)];
+	document.getElementById("q20").innerHTML = q20[RndInt(0,q20.length)];
+	document.getElementById("q21").innerHTML = q21[RndInt(0,q21.length)];
+	document.getElementById("q22").innerHTML = q22[RndInt(0,q22.length)];
+
+	changeinterval = RndInt(500,5000);
+
+},changeinterval);
+
+var zonesongs = ["along","before","connected","doomsday","god","great war","growing old","paedophiles","present","salami","thanatos","tumble"]
+function zonebutton() {
+	
+	var answer = prompt("Where is the zone?")
+
+	if (zonesongs.includes(answer)) {
+		document.getElementById(answer).play()
+	}
+
+	if (answer == "stop") {
+		for (i = 0; i < zonesongs.length; i++) {
+			document.getElementById(zonesongs[i]).pause();
+		};
+	}
+}
 
 /*increment game code, clickmod=1 and rate=16 are the default values*/
 var clickmod = 1;

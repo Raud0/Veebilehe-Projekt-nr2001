@@ -12,7 +12,7 @@ body, html {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: none;
+  padding: 0;
   font-family: "Comic Sans MS", cursive;
   font-size: 20px;
   width: 12.5%;
@@ -179,7 +179,7 @@ canvas {
 }
 .shop {
   text-align: left;
-  padding: none;
+  padding: 0;
   background-color: black;
   width: 100%;
 }
@@ -190,7 +190,7 @@ canvas {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: bolder;
-  padding: none;
+  padding: 0;
   width: 40ch;
 }
 .buttoncell:hover {
@@ -211,6 +211,6 @@ canvas {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: bolder;
-  padding: none;
+  padding: 0;
   width: 40ch;
 }

@@ -68,7 +68,7 @@ canvas {
 #harambe {
   background-color: yellow;
   background-image: url("imagefiles/NotKripp.png");}
-#Why {color: yellow;}
+#Why {color: red;}
 .wtxt1:hover{color: blue;}
 .wtxt2:hover{color: darkorange;}
 .wtxt3:hover{color: darkmagenta;}

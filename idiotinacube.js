@@ -218,7 +218,7 @@ var q15 = ["spend a night","come","GROW accustomed to the weirdos","DRINK with a
 var q16 = ["beat","pulse","rhythm","heartbeat","jazz","current","zone","chemicals","thought","want","strangeness","despair","mood"];
 var q17 = ["I've finally made it","I've completely lost it","I found my zero","They have lost me","the answer isn't here","I shouldn't leave","my shadow has peeled off of me","I'm the hero of a pulp noir","I'm approaching zero","there are 11 time-zones","I've drunk too much"];
 var q18 = ["Where are the Snowdens of yesteryear?","Who drank all the goddamn COFFEE?","Who killed Cpt. Alex?","Why didn't you tell the word?","How can you know that?","Why haven't left yet?","Help! I'm inside the wall?","Do you have any idea how a moldy SALAMI sandwich must feel? Do you?","Why haven't we?","Here's to it!"];
-var q19 = ["get going","hurry up","lose my shadow","get some sleep","hide","be there","perform","say something","... best I didn't tell you","wish you well for now"];
+var q19 = ["get going","hurry up","lose my shadow","STRANGLE someone","get some sleep","hide","be there","perform","say something","... best I didn't tell you","wish you well for now"];
 var q20 = ["Faithfully","Sincerely","Hatefully","in Death","Forever","Only","With all my Heart","In practice only","In thought"];
 var q21 = ["Yossarian","The Dr.","DONUT hole","ROCKET","Dearest Friend","Mike","Bob","Jack","Alice","Nora","Victoria","Elizabeth","GOD","The last free man in the West","Dude","A fellow traveller","John Titor"];
 var q22 = ["What's more","By the by","Strangely enough","Also, I think that you should known","Anyways","Fianlly","As expected"];
@@ -254,7 +254,7 @@ window.setInterval(function(){
 },changeinterval);
 
 var zonesongs = ["along","before","connected","doomsday","god","great war","growing old","paedophiles","present","salami","thanatos","tumble"]
-var zoneimages = ["burger","coffee","donut","drink","escape","foot","grow","hunger","joke","love","man","nazi","planes","rocket","spirit","strange","joint","burden","weebs"]
+var zoneimages = ["strangle","burger","coffee","donut","drink","escape","foot","grow","hunger","joke","love","man","nazi","planes","rocket","spirit","strange","joint","burden","weebs"]
 
 function zonebutton() {
 	

@@ -201,26 +201,26 @@ window.setInterval(function(){
 },350);
 
 var q6 = ["They","the CONNECTED","we","traps","the dead","they","the gods","men","the kings","mothers","PAEDOPHILES"];
-var q1 = ["the unconnected","a bunch of weebs","star-crossed lovers","the extinct","the fateless"];
-var q2 = ["song","home","gestalt","our motherland","zone","docking","fate","GREAT WAR","feast","dance","purpose","zone","PRESENT"];
-var q3 = ["The British G-5","The Red Army Choir","They","The geriatrics","The German scientists","The Mongols","The natives","The Herero","The bureacrats","The wired","The hypermodernists","The annihilists","The pancake masters"];
+var q1 = ["the unconnected","a bunch of WEEBS","star-crossed lovers","the extinct","the fateless","beasts of BURDEN"];
+var q2 = ["song","home","gestalt","our motherland","zone","docking","fate","GREAT WAR","feast","dance","purpose","zone","PRESENT","ESCAPE"];
+var q3 = ["The British G-5","The Red Army Choir","The PLANES","They","The geriatrics","The NAZI scientists","The Mongols","The natives","The Herero","The bureacrats","The wired","The hypermodernists","The annihilists","The pancake masters"];
 var q4 = ["Japanese Zeros","the paparazzi","louds blasts","the choirs of angels","the hungry","the ceaseless public hangins","humanity's oldest friend","the smell of sizzling bacon","GOD"];
-var q5 = ["silent","strange","odd","hauntingly quite","pristine","uncomfortable","awkward","open","nostalgic","PRESENT"];
+var q5 = ["silent","STRANGE","odd","hauntingly quite","pristine","uncomfortable","awkward","open","nostalgic","PRESENT"];
 var q7 = ["the horizonless sea","U.S.S.R.","our old home","the blasted heath","the PRESENT","the shelled waste","our prison"];
-var q8 = ["the BEFORE","the great mountainrange","the old forest","the promised land","Acheron","Stix","graves waiting for their fill"];
-var q9 = ["Wish you were here","If only you were alive to see this","You should visit","I know a nice place around here we could go to one, once you come around","You can't understand unless you see it with your own eyes","They won't let me leave"];
-var q10 = ["the bombs drop","the pope visits","the peace treaties are signed","the people are forced to leave","the last man is exectued","the food runs out","the war ends","the people remember they should be GROWING OLD","DOOMSDAY arrives"];
-var q11 = ["one","in sync","together","of the same belief","alone","connected","in love","everyone","bondage","schizophrenic","a somnambulist","drunk","directionless","confused"];
-var q12 = ["place","juncture","junction of refugees","shantytown","metropolis","TUMBLE","zone","decomposing garden","picadilly circus"];
-var q13 = ["get lost","fall in love","lose oneself","end up finding new and interesting people","commit a murder","fall into line","become a part of the great hullabaloo","get into jazz","turn red","end up dead"];
+var q8 = ["the BEFORE","the great mountainrange","the work of MAN","the old forest","the promised land","Acheron","Stix","graves waiting for their fill"];
+var q9 = ["Wish you were here","If only you were alive to see this","You should visit","I know a nice place near me that makes a really good BURGER that we should visit, once you come around","You can't understand unless you see it with your own eyes","They won't let me leave"];
+var q10 = ["the bombs drop","the pope visits","the peace treaties are signed","the young are SPIRITed away","the people are forced to leave","the last man is exectued","the food runs out","the war ends","the people remember they should be GROWING OLD","DOOMSDAY arrives"];
+var q11 = ["one","in sync","together","of the same belief","alone","connected","apart of the Great JOKE","in love","everyone","in bondage","schizophrenic","a somnambulist","drunk","directionless","confused"];
+var q12 = ["place","juncture","junction of refugees","JOINT","city of HUNGER","shantytown","metropolis","TUMBLE","zone","decomposing garden","picadilly circus"];
+var q13 = ["get lost","fall in LOVE","lose your FOOTing","lose oneself","end up finding new and interesting people","commit a murder","fall into line","become a part of the great hullabaloo","get into jazz","turn red","end up dead"];
 var q14 = ["don't be humble, take a TUMBLE","THANATOS is patient","SALAMI goes best with Polish bread","moonlight cocktail isn't real","everything is a cyclical","the zero","I'm being hunted","I never was","kindness and cruelty lie side by side in the strangest places","the world is funny"];
-var q15 = ["spend a night","come","drink with a stranger","dance the dance","become found","start to think","forget your name","find your past","get your home stolen"];
+var q15 = ["spend a night","come","GROW accustomed to the weirdos","DRINK with a stranger","dance the dance","become found","start to think","forget your name","find your past","get your home stolen"];
 var q16 = ["beat","pulse","rhythm","heartbeat","jazz","current","zone","chemicals","thought","want","strangeness","despair","mood"];
 var q17 = ["I've finally made it","I've completely lost it","I found my zero","They have lost me","the answer isn't here","I shouldn't leave","my shadow has peeled off of me","I'm the hero of a pulp noir","I'm approaching zero","there are 11 time-zones","I've drunk too much"];
-var q18 = ["Where are the Snowdens of yesteryear?","Who killed Cpt. Alex?","Why didn't you tell the word?","How can you know that?","Why haven't left yet?","Help! I'm inside the wall?","Do you have any idea how a moldy SALAMI sandwich must feel? Do you?","Why haven't we?","Here's to it!"];
-var q19 = ["get going","hurry up","lose my shadow","get some sleep","hide","be there","perform","say something","... best I didn't tell you","wish you well for now"];
+var q18 = ["Where are the Snowdens of yesteryear?","Who drank all the goddamn COFFEE?","Who killed Cpt. Alex?","Why didn't you tell the word?","How can you know that?","Why haven't left yet?","Help! I'm inside the wall?","Do you have any idea how a moldy SALAMI sandwich must feel? Do you?","Why haven't we?","Here's to it!"];
+var q19 = ["get going","hurry up","lose my shadow","STRANGLE someone","get some sleep","hide","be there","perform","say something","... best I didn't tell you","wish you well for now"];
 var q20 = ["Faithfully","Sincerely","Hatefully","in Death","Forever","Only","With all my Heart","In practice only","In thought"];
-var q21 = ["Yossarian","The Dr.","Dearest Friend","Mike","Bob","Jack","Alice","Nora","Victoria","Elizabeth","GOD","The last free man in the West","Dude","A fellow traveller","John Titor"];
+var q21 = ["Yossarian","The Dr.","DONUT hole","ROCKET","Dearest Friend","Mike","Bob","Jack","Alice","Nora","Victoria","Elizabeth","GOD","The last free man in the West","Dude","A fellow traveller","John Titor"];
 var q22 = ["What's more","By the by","Strangely enough","Also, I think that you should known","Anyways","Fianlly","As expected"];
 
 var changeinterval = 1000;
@@ -254,19 +254,27 @@ window.setInterval(function(){
 },changeinterval);
 
 var zonesongs = ["along","before","connected","doomsday","god","great war","growing old","paedophiles","present","salami","thanatos","tumble"]
+var zoneimages = ["strangle","burger","coffee","donut","drink","escape","foot","grow","hunger","joke","love","man","nazi","planes","rocket","spirit","strange","joint","burden","weebs"]
+
 function zonebutton() {
 	
-	var answer = prompt("Where is the zone?")
+	var answer = prompt("Where is the zone?").toLocaleLowerCase();
 
 	if (zonesongs.includes(answer)) {
 		document.getElementById(answer).play()
 	}
-
 	if (answer == "stop") {
 		for (i = 0; i < zonesongs.length; i++) {
 			document.getElementById(zonesongs[i]).pause();
 		};
-	}
+	};
+
+	if (zoneimages.includes(answer)) {
+		document.getElementById("shibuya").style.display = "none";
+		document.getElementById("nowshowing").style.display = "block";
+		document.getElementById("nowshowing").src = "imagefiles/zone/" + answer + ".jpg";
+	};
+
 }
 
 /*increment game code, clickmod=1 and rate=16 are the default values*/

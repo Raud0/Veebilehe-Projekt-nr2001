@@ -260,21 +260,24 @@ function zonebutton() {
 	
 	var answer = prompt("Where is the zone?").toLocaleLowerCase();
 
-	if (zonesongs.includes(answer)) {
-		document.getElementById(answer).play()
-	}
 	if (answer == "stop") {
 		for (i = 0; i < zonesongs.length; i++) {
 			document.getElementById(zonesongs[i]).pause();
 		};
 	};
-
-	if (zoneimages.includes(answer)) {
-		document.getElementById("shibuya").style.display = "none";
-		document.getElementById("nowshowing").style.display = "block";
-		document.getElementById("nowshowing").src = "imagefiles/zone/" + answer + ".jpg";
-	};
-
+	for (i = 0; i < zonesongs.length; i++) {
+		if (zonesongs[i] == answer) {
+			document.getElementById(answer).play()
+		}
+	}	
+	for (i = 0; i < zoneimages.length; i++) {
+		if (zoneimages[i] == answer) {
+			document.getElementById("shibuya").style.display = "none";
+			document.getElementById("nowshowing").style.display = "block";
+			document.getElementById("nowshowing").src = "imagefiles/zone/" + answer + ".jpg";
+		};
+	}
+	
 }
 
 /*increment game code, clickmod=1 and rate=16 are the default values*/
